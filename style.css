@@ -1,0 +1,64 @@
+/*
+Pierce Bennett	C00242526
+23/10/2021
+
+*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --mainColour: #a5a5a8;
+    --accentOne: #bee7f3;
+    --accentTwo: #7ce880;
+    --accentThree: #d86f6f;
+    --accentFour: #41B3A3;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: cornsilk;
+    font-size: 1em;
+    font-family: "Helvetica";
+    position: relative;
+    background: repeating-linear-gradient(135deg, var(--mainColour) 0%, var(--accentOne) 25%, var(--mainColour) 50%, var(--accentOne) 75%, var(--mainColour) 100%);
+    display: inline-grid;
+    grid-template-rows: 10% 30% 45% 14%;
+    grid-template-columns: 48% 48%;
+    grid-template-areas:
+        "header header"
+        "section results"
+        "form results"
+        "footer footer"
+    ;
+    grid-gap: 2%;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    grid-area: header;
+    border-bottom: .2em ridge var(--accentTwo);
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+}
+
+header h2 {
+    top: .4em;
+}
+
+footer {
+    grid-area: footer;
+    font-size: .8em;
+}
