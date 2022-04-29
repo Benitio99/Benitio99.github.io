@@ -1,6 +1,5 @@
 var app_8py =
 [
-    [ "displayDocumentation", "app_8py.html#affabdd882d8c940cefb64ced31021c66", null ],
     [ "displayHomepage", "app_8py.html#a2b8c7dbdf96c543332bfd7861692e44e", null ],
     [ "displayResults", "app_8py.html#a6a8aede1b182a37b484e8204a119d007", null ],
     [ "shutdown", "app_8py.html#a2f62c8fee353c7bb1339007a8235ce12", null ],

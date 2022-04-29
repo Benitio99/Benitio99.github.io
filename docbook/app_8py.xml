@@ -24,10 +24,6 @@
 
 <para>Shutsdown the server. </para>
 </listitem>
-            <listitem><para>def <link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">app.displayDocumentation</link> ()</para>
-
-<para>Serves the Documentation for the program. </para>
-</listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>

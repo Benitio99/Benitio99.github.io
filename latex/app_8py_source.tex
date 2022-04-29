@@ -1,60 +1,53 @@
 \hypertarget{app_8py_source}{}\doxysection{C\+:/\+Users/unumuser/\+One\+Drive -\/ Institute of Technology Carlow/\+Software Development 4th year/\+Project/\+Repo/\+Context/app.py}
 \mbox{\hyperlink{app_8py}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00001}\mbox{\hyperlink{namespaceapp}{00001}} \textcolor{keyword}{from} flask \textcolor{keyword}{import} Flask, render\_template, request, session, jsonify}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00001}\mbox{\hyperlink{namespaceapp}{00001}} \textcolor{keyword}{from} flask \textcolor{keyword}{import} Flask, render\_template, request, session}
 \DoxyCodeLine{\Hypertarget{app_8py_source_l00002}00002 \textcolor{keyword}{import} Controller}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00003}00003 \textcolor{keyword}{import} os}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00005}\mbox{\hyperlink{namespaceapp_a675b4ea702c13dc4b8c05f985a25b496}{00005}} app = Flask(\_\_name\_\_)}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00006}\mbox{\hyperlink{namespaceapp_ab97b4dc4c1d36802b081c79135c567ca}{00006}} controller = \mbox{\hyperlink{class_controller_1_1_controller}{Controller.Controller}}()}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00004}\mbox{\hyperlink{namespaceapp_a675b4ea702c13dc4b8c05f985a25b496}{00004}} app = Flask(\_\_name\_\_)}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00005}\mbox{\hyperlink{namespaceapp_ab97b4dc4c1d36802b081c79135c567ca}{00005}} controller = \mbox{\hyperlink{class_controller_1_1_controller}{Controller.Controller}}()}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00006}00006 }
 \DoxyCodeLine{\Hypertarget{app_8py_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00009}00009 \textcolor{preprocessor}{@app.route("{}/"{})}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00010}00010 \textcolor{preprocessor}{@app.route("{}/index"{})}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00011}\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{00011}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{displayHomepage}}():}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00012}00012     \textcolor{stringliteral}{"{}"{}"{}! Serves the initial homepage of the application."{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00013}00013     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}SpellChecker"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00008}00008 \textcolor{preprocessor}{@app.route("{}/"{})}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00009}00009 \textcolor{preprocessor}{@app.route("{}/index"{})}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00010}\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{00010}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{displayHomepage}}():}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00011}00011     \textcolor{stringliteral}{"{}"{}"{}! Serves the initial homepage of the application."{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00012}00012     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}SpellChecker"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00013}00013 }
 \DoxyCodeLine{\Hypertarget{app_8py_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00016}00016 \textcolor{preprocessor}{@app.route("{}/"{}, methods=["{}POST"{}])}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00017}00017 \textcolor{preprocessor}{@app.route("{}/index"{}, methods=["{}POST"{}])}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00018}\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{00018}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{displayResults}}():}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00019}00019     \textcolor{stringliteral}{"{}"{}"{}! Requests results from the model and updates the page"{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00020}00020     session[\textcolor{stringliteral}{"{}inputText"{}}] = inputText = request.form[\textcolor{stringliteral}{"{}inputText"{}}]}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00021}00021     \textcolor{keywordflow}{if} controller.containsError(inputText):}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00022}00022         matches = controller.processInput(inputText)}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00023}00023         best = matches[:1]}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00024}00024         word = next(iter(next(iter(best))))}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00025}00025         \textcolor{keywordflow}{return} render\_template(}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00026}00026             \textcolor{stringliteral}{"{}results.html"{}},}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00027}00027             title=\textcolor{stringliteral}{"{}Here are your results"{}},}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00028}00028             data=matches,}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00029}00029             sentence=inputText,}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00030}00030             top=word,}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00031}00031         )}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00032}00032     \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00033}00033         \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}Please enter a valid input"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00015}00015 \textcolor{preprocessor}{@app.route("{}/"{}, methods=["{}POST"{}])}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00016}00016 \textcolor{preprocessor}{@app.route("{}/index"{}, methods=["{}POST"{}])}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00017}\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{00017}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{displayResults}}():}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00018}00018     \textcolor{stringliteral}{"{}"{}"{}! Requests results from the model and updates the page"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00019}00019     session[\textcolor{stringliteral}{"{}inputText"{}}] = inputText = request.form[\textcolor{stringliteral}{"{}inputText"{}}]}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00020}00020     \textcolor{keywordflow}{if} controller.containsError(inputText):}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00021}00021         matches = controller.processInput(inputText)}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00022}00022         best = matches[:1]}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00023}00023         word = next(iter(next(iter(best))))}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00024}00024         \textcolor{keywordflow}{return} render\_template(}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00025}00025             \textcolor{stringliteral}{"{}results.html"{}},}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00026}00026             title=\textcolor{stringliteral}{"{}Here are your results"{}},}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00027}00027             data=matches,}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00028}00028             sentence=inputText,}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00029}00029             top=word,}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00030}00030         )}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00031}00031     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00032}00032         \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}Please enter a valid input"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00033}00033 }
 \DoxyCodeLine{\Hypertarget{app_8py_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00036}00036 \textcolor{preprocessor}{@app.route("{}/shutdown"{}, methods=["{}GET"{}])}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00037}\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{00037}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{shutdown}}():}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00038}00038     \textcolor{stringliteral}{"{}"{}"{}! Shutsdown the server"{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00039}00039 \textcolor{stringliteral}{    shutdown\_func = request.environ.get("{}werkzeug.server.shutdown"{}})}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00040}00040     \textcolor{keywordflow}{if} shutdown\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00041}00041         \textcolor{keywordflow}{raise} RuntimeError(\textcolor{stringliteral}{"{}Not running werkzeug"{}})}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00042}00042     shutdown\_func()}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00043}00043     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Shutting down..."{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00035}00035 \textcolor{preprocessor}{@app.route("{}/shutdown"{}, methods=["{}GET"{}])}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00036}\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{00036}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{shutdown}}():}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00037}00037     \textcolor{stringliteral}{"{}"{}"{}! Shutsdown the server"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00038}00038 \textcolor{stringliteral}{    shutdown\_func = request.environ.get("{}werkzeug.server.shutdown"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00039}00039     \textcolor{keywordflow}{if} shutdown\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00040}00040         \textcolor{keywordflow}{raise} RuntimeError(\textcolor{stringliteral}{"{}Not running werkzeug"{}})}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00041}00041     shutdown\_func()}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00042}00042     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Shutting down..."{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00043}00043 }
 \DoxyCodeLine{\Hypertarget{app_8py_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00046}00046 \textcolor{preprocessor}{@app.route("{}/documentation"{})}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00047}\mbox{\hyperlink{namespaceapp_affabdd882d8c940cefb64ced31021c66}{00047}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_affabdd882d8c940cefb64ced31021c66}{displayDocumentation}}():}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00048}00048     \textcolor{stringliteral}{"{}"{}"{}! Serves the Documentation for the program."{}"{}"{}}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00049}00049     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}/documentation/html/index.html"{}})}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00050}00050 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00051}00051 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00052}00052 app.secret\_key = \textcolor{stringliteral}{"{}123456789qwertyuiopasdfghjklzxcvbnm"{}}}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00054}00054 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
-\DoxyCodeLine{\Hypertarget{app_8py_source_l00055}\mbox{\hyperlink{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}{00055}}     app.run(host=\textcolor{stringliteral}{"{}127.0.0.1"{}}, port=5000)}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00045}00045 app.secret\_key = \textcolor{stringliteral}{"{}123456789qwertyuiopasdfghjklzxcvbnm"{}}}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00047}00047 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{app_8py_source_l00048}\mbox{\hyperlink{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}{00048}}     app.run(host=\textcolor{stringliteral}{"{}127.0.0.1"{}}, port=5000)}
 
 \end{DoxyCode}

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['loadbasemodel_0',['loadBaseModel',['../class_controller_1_1_controller.html#a22d89b586f67574be91e5932f74a56d6',1,'Controller::Controller']]],
-  ['loadbasetokenizer_1',['loadBaseTokenizer',['../class_controller_1_1_controller.html#a01287a6cf026161bdcf462908477d349',1,'Controller::Controller']]],
-  ['loaddictionary_2',['loadDictionary',['../class_controller_1_1_controller.html#af3e9d79eac0b7cdb8f91ce5962f9d4ca',1,'Controller::Controller']]],
-  ['loadmodel_3',['loadModel',['../class_controller_1_1_controller.html#af53e655391e6d2b325b1c2c6c5ee545c',1,'Controller::Controller']]],
-  ['loadtokenizer_4',['loadTokenizer',['../class_controller_1_1_controller.html#a2a06f91cbec4e350b8662b3047022248',1,'Controller::Controller']]]
+  ['maskedinput_0',['maskedInput',['../class_controller_1_1_controller.html#a664d2bba1b9baee6672e0e233bffb8aa',1,'Controller::Controller']]],
+  ['model_1',['model',['../class_controller_1_1_controller.html#a147f1744acd980948a67709747fc382b',1,'Controller::Controller']]],
+  ['modelguesssynset_2',['modelGuessSynset',['../class_controller_1_1_controller.html#aeffc254b8725ff40b46c077df12884f3',1,'Controller::Controller']]],
+  ['modellocation_3',['MODELLOCATION',['../namespace_controller.html#a78fbfe0377be4cc5daaf3537ff9420bd',1,'Controller']]],
+  ['modelname_4',['MODELNAME',['../namespace_controller.html#a90acebe83abcb207caabddd5c57ec933',1,'Controller']]],
+  ['modelresults_5',['modelResults',['../class_controller_1_1_controller.html#a56ca938edde13ee70e9a2eae0b0d239a',1,'Controller::Controller']]],
+  ['modelresultssynset_6',['modelResultsSynset',['../class_controller_1_1_controller.html#a35f6a1e97c4d9f52549ad22b723ac427',1,'Controller::Controller']]]
 ];

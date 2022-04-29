@@ -8,9 +8,7 @@ def \mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{display\+Ho
 def \mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{display\+Results}} ()
 \begin{DoxyCompactList}\small\item\em Requests results from the model and updates the page. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{shutdown}} ()
-\begin{DoxyCompactList}\small\item\em Shutsdown the server. \end{DoxyCompactList}\item 
-def \mbox{\hyperlink{namespaceapp_affabdd882d8c940cefb64ced31021c66}{display\+Documentation}} ()
-\begin{DoxyCompactList}\small\item\em Serves the Documentation for the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Shutsdown the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,31 +23,6 @@ def \mbox{\hyperlink{namespaceapp_affabdd882d8c940cefb64ced31021c66}{display\+Do
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespaceapp_affabdd882d8c940cefb64ced31021c66}\label{namespaceapp_affabdd882d8c940cefb64ced31021c66}} 
-\index{app@{app}!displayDocumentation@{displayDocumentation}}
-\index{displayDocumentation@{displayDocumentation}!app@{app}}
-\doxysubsubsection{\texorpdfstring{displayDocumentation()}{displayDocumentation()}}
-{\footnotesize\ttfamily def app.\+display\+Documentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Serves the Documentation for the program. 
-
-
-
-Definition at line \mbox{\hyperlink{app_8py_source_l00047}{47}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00047 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_affabdd882d8c940cefb64ced31021c66}{displayDocumentation}}():}
-\DoxyCodeLine{00048     \textcolor{stringliteral}{"{}"{}"{}! Serves the Documentation for the program."{}"{}"{}}}
-\DoxyCodeLine{00049     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}/documentation/html/index.html"{}})}
-\DoxyCodeLine{00050 }
-\DoxyCodeLine{00051 }
-\DoxyCodeLine{00052 app.secret\_key = \textcolor{stringliteral}{"{}123456789qwertyuiopasdfghjklzxcvbnm"{}}}
-\DoxyCodeLine{00053 }
-
-\end{DoxyCode}
 \mbox{\Hypertarget{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}\label{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}} 
 \index{app@{app}!displayHomepage@{displayHomepage}}
 \index{displayHomepage@{displayHomepage}!app@{app}}
@@ -62,17 +35,17 @@ Serves the initial homepage of the application.
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00011}{11}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00010}{10}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00011 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{displayHomepage}}():}
-\DoxyCodeLine{00012     \textcolor{stringliteral}{"{}"{}"{}! Serves the initial homepage of the application."{}"{}"{}}}
-\DoxyCodeLine{00013     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}SpellChecker"{}})}
+\DoxyCodeLine{00010 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2b8c7dbdf96c543332bfd7861692e44e}{displayHomepage}}():}
+\DoxyCodeLine{00011     \textcolor{stringliteral}{"{}"{}"{}! Serves the initial homepage of the application."{}"{}"{}}}
+\DoxyCodeLine{00012     \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}SpellChecker"{}})}
+\DoxyCodeLine{00013 }
 \DoxyCodeLine{00014 }
-\DoxyCodeLine{00015 }
-\DoxyCodeLine{00016 \textcolor{preprocessor}{@app.route("{}/"{}, methods=["{}POST"{}])}}
-\DoxyCodeLine{00017 \textcolor{preprocessor}{@app.route("{}/index"{}, methods=["{}POST"{}])}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{@app.route("{}/"{}, methods=["{}POST"{}])}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{@app.route("{}/index"{}, methods=["{}POST"{}])}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespaceapp_a6a8aede1b182a37b484e8204a119d007}\label{namespaceapp_a6a8aede1b182a37b484e8204a119d007}} 
@@ -87,29 +60,29 @@ Requests results from the model and updates the page.
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00018}{18}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00017}{17}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00018 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{displayResults}}():}
-\DoxyCodeLine{00019     \textcolor{stringliteral}{"{}"{}"{}! Requests results from the model and updates the page"{}"{}"{}}}
-\DoxyCodeLine{00020     session[\textcolor{stringliteral}{"{}inputText"{}}] = inputText = request.form[\textcolor{stringliteral}{"{}inputText"{}}]}
-\DoxyCodeLine{00021     \textcolor{keywordflow}{if} controller.containsError(inputText):}
-\DoxyCodeLine{00022         matches = controller.processInput(inputText)}
-\DoxyCodeLine{00023         best = matches[:1]}
-\DoxyCodeLine{00024         word = next(iter(next(iter(best))))}
-\DoxyCodeLine{00025         \textcolor{keywordflow}{return} render\_template(}
-\DoxyCodeLine{00026             \textcolor{stringliteral}{"{}results.html"{}},}
-\DoxyCodeLine{00027             title=\textcolor{stringliteral}{"{}Here are your results"{}},}
-\DoxyCodeLine{00028             data=matches,}
-\DoxyCodeLine{00029             sentence=inputText,}
-\DoxyCodeLine{00030             top=word,}
-\DoxyCodeLine{00031         )}
-\DoxyCodeLine{00032     \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{00033         \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}Please enter a valid input"{}})}
+\DoxyCodeLine{00017 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a6a8aede1b182a37b484e8204a119d007}{displayResults}}():}
+\DoxyCodeLine{00018     \textcolor{stringliteral}{"{}"{}"{}! Requests results from the model and updates the page"{}"{}"{}}}
+\DoxyCodeLine{00019     session[\textcolor{stringliteral}{"{}inputText"{}}] = inputText = request.form[\textcolor{stringliteral}{"{}inputText"{}}]}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{if} controller.containsError(inputText):}
+\DoxyCodeLine{00021         matches = controller.processInput(inputText)}
+\DoxyCodeLine{00022         best = matches[:1]}
+\DoxyCodeLine{00023         word = next(iter(next(iter(best))))}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{return} render\_template(}
+\DoxyCodeLine{00025             \textcolor{stringliteral}{"{}results.html"{}},}
+\DoxyCodeLine{00026             title=\textcolor{stringliteral}{"{}Here are your results"{}},}
+\DoxyCodeLine{00027             data=matches,}
+\DoxyCodeLine{00028             sentence=inputText,}
+\DoxyCodeLine{00029             top=word,}
+\DoxyCodeLine{00030         )}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} render\_template(\textcolor{stringliteral}{"{}index.html"{}}, title=\textcolor{stringliteral}{"{}Please enter a valid input"{}})}
+\DoxyCodeLine{00033 }
 \DoxyCodeLine{00034 }
-\DoxyCodeLine{00035 }
-\DoxyCodeLine{00036 \textcolor{preprocessor}{@app.route("{}/shutdown"{}, methods=["{}GET"{}])}}
+\DoxyCodeLine{00035 \textcolor{preprocessor}{@app.route("{}/shutdown"{}, methods=["{}GET"{}])}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}\label{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}} 
@@ -124,20 +97,21 @@ Shutsdown the server.
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00037}{37}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00036}{36}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00037 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{shutdown}}():}
-\DoxyCodeLine{00038     \textcolor{stringliteral}{"{}"{}"{}! Shutsdown the server"{}"{}"{}}}
-\DoxyCodeLine{00039 \textcolor{stringliteral}{    shutdown\_func = request.environ.get("{}werkzeug.server.shutdown"{}})}
-\DoxyCodeLine{00040     \textcolor{keywordflow}{if} shutdown\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:}
-\DoxyCodeLine{00041         \textcolor{keywordflow}{raise} RuntimeError(\textcolor{stringliteral}{"{}Not running werkzeug"{}})}
-\DoxyCodeLine{00042     shutdown\_func()}
-\DoxyCodeLine{00043     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Shutting down..."{}}}
+\DoxyCodeLine{00036 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceapp_a2f62c8fee353c7bb1339007a8235ce12}{shutdown}}():}
+\DoxyCodeLine{00037     \textcolor{stringliteral}{"{}"{}"{}! Shutsdown the server"{}"{}"{}}}
+\DoxyCodeLine{00038 \textcolor{stringliteral}{    shutdown\_func = request.environ.get("{}werkzeug.server.shutdown"{}})}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{if} shutdown\_func \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:}
+\DoxyCodeLine{00040         \textcolor{keywordflow}{raise} RuntimeError(\textcolor{stringliteral}{"{}Not running werkzeug"{}})}
+\DoxyCodeLine{00041     shutdown\_func()}
+\DoxyCodeLine{00042     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Shutting down..."{}}}
+\DoxyCodeLine{00043 }
 \DoxyCodeLine{00044 }
-\DoxyCodeLine{00045 }
-\DoxyCodeLine{00046 \textcolor{preprocessor}{@app.route("{}/documentation"{})}}
+\DoxyCodeLine{00045 app.secret\_key = \textcolor{stringliteral}{"{}123456789qwertyuiopasdfghjklzxcvbnm"{}}}
+\DoxyCodeLine{00046 }
 
 \end{DoxyCode}
 
@@ -151,7 +125,7 @@ Definition at line \mbox{\hyperlink{app_8py_source_l00037}{37}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00005}{5}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00004}{4}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 \mbox{\Hypertarget{namespaceapp_ab97b4dc4c1d36802b081c79135c567ca}\label{namespaceapp_ab97b4dc4c1d36802b081c79135c567ca}} 
 \index{app@{app}!controller@{controller}}
@@ -161,7 +135,7 @@ Definition at line \mbox{\hyperlink{app_8py_source_l00005}{5}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00006}{6}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00005}{5}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 \mbox{\Hypertarget{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}\label{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}} 
 \index{app@{app}!host@{host}}
@@ -171,7 +145,7 @@ Definition at line \mbox{\hyperlink{app_8py_source_l00006}{6}} of file \mbox{\hy
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00055}{55}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00048}{48}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 
 \mbox{\Hypertarget{namespaceapp_ae996542be63ac459a38531f7c2dd0a49}\label{namespaceapp_ae996542be63ac459a38531f7c2dd0a49}} 
 \index{app@{app}!port@{port}}
@@ -181,5 +155,5 @@ Definition at line \mbox{\hyperlink{app_8py_source_l00055}{55}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{app_8py_source_l00055}{55}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
+Definition at line \mbox{\hyperlink{app_8py_source_l00048}{48}} of file \mbox{\hyperlink{app_8py_source}{app.\+py}}.
 

@@ -38,8 +38,6 @@
 
 <para>Returns the word before the error and the next word after the error. </para>
 </listitem>
-            <listitem><para>def <link linkend="_class_controller_1_1_controller_1a179aa818497a96016997c95b44ed1d3d">fitData</link> (self, input)</para>
-</listitem>
             <listitem><para>def <link linkend="_class_controller_1_1_controller_1a786551a4b53767e916ac06c06a4c20ed">getEditDistance</link> (self, originalWord, stringCompared)</para>
 
 <para>Returns the edit distance between the original word and the string compared. </para>
@@ -47,8 +45,6 @@
             <listitem><para>def <link linkend="_class_controller_1_1_controller_1aa59e5b734bcbd927d121f8928a52ede7">getEditDistanceList</link> (self)</para>
 
 <para>Returns a list of the all potential words with the edit distances between the potential word and the original error. </para>
-</listitem>
-            <listitem><para>def <link linkend="_class_controller_1_1_controller_1a44ec9d1e8a24e62eea33bc10a562c459">getError</link> (self, input)</para>
 </listitem>
             <listitem><para>def <link linkend="_class_controller_1_1_controller_1a6cd1bb1533b44039e67913d2b54a01a6">getModelPredictions</link> (self, input)</para>
 
@@ -89,10 +85,6 @@
             <listitem><para>def <link linkend="_class_controller_1_1_controller_1a5dfc2051795ea4ec97417ba222f57697">shortGetEditDistance</link> (self, originalWord, stringCompared)</para>
 
 <para>Gets the edit distance required to change strignCompared into original Word using the levenshtein method. </para>
-</listitem>
-            <listitem><para>def <link linkend="_class_controller_1_1_controller_1abcb06d1dc6adaa1b7cb78a6e3db227df">show</link> (self)</para>
-
-<para>prints all main data members of the class </para>
 </listitem>
             <listitem><para>def <link linkend="_class_controller_1_1_controller_1af44c825436585bbcd07455352e9dc8e7">sortEditDistances</link> (self)</para>
 
@@ -146,7 +138,7 @@
 
 <para>Defines the <link linkend="_class_controller_1_1_controller">Controller</link> class that contains the main functionality of the spell checker. </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00064">64</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00061">61</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <section>
 <title>Constructor &amp; Destructor Documentation</title>
@@ -159,25 +151,25 @@ Definition at line <link linkend="__controller_8py_source_1l00064">64</link> of 
 <para>The <link linkend="_class_controller_1_1_controller">Controller</link> class initializer. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00069">69</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00069 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>__init__(self):
-00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;The&#32;Controller&#32;class&#32;initializer.&quot;&quot;&quot;</emphasis>
-00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.contextError&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
-00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.wordNet&#32;=&#32;wordnet
-00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.model&#32;=&#32;self.loadModel(MODELLOCATION)
-00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.tokenizer&#32;=&#32;self.loadTokenizer(TOKENIZERLOCATION)
-00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.pipeline&#32;=&#32;self.createPipeline()
-00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResults&#32;=&#32;[]
-00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelGuessSynset&#32;=&#32;[]
-00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances&#32;=&#32;[]
-00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.predictedValues&#32;=&#32;[]
-00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.dictionary&#32;=&#32;self.loadDictionary()
-00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.similarWords&#32;=&#32;[]
-00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.preWord&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
-00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.postWord&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
-00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.wordSet&#32;=&#32;set()
-00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;nltk.download(<emphasis role="stringliteral">&quot;wordnet&quot;</emphasis>)
-00086 
+Definition at line <link linkend="__controller_8py_source_1l00066">66</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00066 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>__init__(self):
+00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;The&#32;Controller&#32;class&#32;initializer.&quot;&quot;&quot;</emphasis>
+00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.contextError&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
+00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.wordNet&#32;=&#32;wordnet
+00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.model&#32;=&#32;self.loadModel(MODELLOCATION)
+00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.tokenizer&#32;=&#32;self.loadTokenizer(TOKENIZERLOCATION)
+00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.pipeline&#32;=&#32;self.createPipeline()
+00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResults&#32;=&#32;[]
+00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelGuessSynset&#32;=&#32;[]
+00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances&#32;=&#32;[]
+00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.predictedValues&#32;=&#32;[]
+00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.dictionary&#32;=&#32;self.loadDictionary()
+00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.similarWords&#32;=&#32;[]
+00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.preWord&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
+00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.postWord&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
+00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.wordSet&#32;=&#32;set()
+00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;nltk.download(<emphasis role="stringliteral">&quot;wordnet&quot;</emphasis>)
+00083 
 </programlisting></section>
 </section>
 <section>
@@ -213,15 +205,15 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00087">87</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00087 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>addMask(self,&#32;input):
-00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
-00089 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00091 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mask&#32;=&#32;self.tokenizer.mask_token</emphasis>
-00092 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;input&#32;=&#32;regex.sub(&quot;[[A-Za-z]+]&quot;</emphasis>,&#32;mask,&#32;input)
-00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input
-00094 
+Definition at line <link linkend="__controller_8py_source_1l00084">84</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00084 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>addMask(self,&#32;input):
+00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
+00086 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00088 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mask&#32;=&#32;self.tokenizer.mask_token</emphasis>
+00089 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;input&#32;=&#32;regex.sub(&quot;[[A-Za-z]+]&quot;</emphasis>,&#32;mask,&#32;input)
+00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input
+00091 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1aaca6af6776f1c22c159a8427de18d4e6"/><section>
     <title>containsError()</title>
@@ -254,17 +246,17 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00095">95</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00095 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>containsError(self,&#32;input):
-00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;True&#32;if&#32;the&#32;user&#32;given&#32;input&#32;has&#32;[*]&#32;contained&#32;within&#32;the&#32;input.</emphasis>
-00097 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00099 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pattern&#32;=&#32;&quot;[[A-Za-z]+]&quot;</emphasis>
-00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;regex.search(pattern,&#32;input):
-00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">True</emphasis>
-00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
-00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">False</emphasis>
-00104 
+Definition at line <link linkend="__controller_8py_source_1l00092">92</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00092 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>containsError(self,&#32;input):
+00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;True&#32;if&#32;the&#32;user&#32;given&#32;input&#32;has&#32;[*]&#32;contained&#32;within&#32;the&#32;input.</emphasis>
+00094 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00096 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pattern&#32;=&#32;&quot;[[A-Za-z]+]&quot;</emphasis>
+00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;regex.search(pattern,&#32;input):
+00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">True</emphasis>
+00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">False</emphasis>
+00101 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1adb9e3b63ca788d395976a8e490b39b46"/><section>
     <title>createPipeline()</title>
@@ -275,14 +267,14 @@ Definition at line <link linkend="__controller_8py_source_1l00095">95</link> of 
 <para>Creates a transformer pipeline for the model. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00105">105</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00105 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>createPipeline(self):
-00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Creates&#32;a&#32;transformer&#32;pipeline&#32;for&#32;the&#32;model.&quot;&quot;&quot;</emphasis>
-00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pipeline&#32;=&#32;transformers.pipeline(
-00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PIPELINETYPE,&#32;model=self.model,&#32;tokenizer=self.tokenizer
-00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
-00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pipeline
-00111 
+Definition at line <link linkend="__controller_8py_source_1l00102">102</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00102 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>createPipeline(self):
+00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Creates&#32;a&#32;transformer&#32;pipeline&#32;for&#32;the&#32;model.&quot;&quot;&quot;</emphasis>
+00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pipeline&#32;=&#32;transformers.pipeline(
+00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PIPELINETYPE,&#32;model=self.model,&#32;tokenizer=self.tokenizer
+00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pipeline
+00108 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a6a13327da753028156eec821f1852dc8"/><section>
     <title>crossCheck()</title>
@@ -315,14 +307,14 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00112">112</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00112 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>crossCheck(self,&#32;input):
-00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
-00114 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00116 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;difflib.get_close_matches(input,&#32;self.dictionary)</emphasis>
-00117 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;similarWords
-00118 
+Definition at line <link linkend="__controller_8py_source_1l00109">109</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00109 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>crossCheck(self,&#32;input):
+00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
+00111 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00113 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;difflib.get_close_matches(input,&#32;self.dictionary)</emphasis>
+00114 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;similarWords
+00115 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1af46f7f314af5aef8d5d35e388232dfc6"/><section>
     <title>extractPreAndPost()</title>
@@ -355,26 +347,26 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00125">125</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00125 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>extractPreAndPost(self,&#32;input):
-00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;the&#32;word&#32;before&#32;the&#32;error&#32;and&#32;the&#32;next&#32;word&#32;after&#32;the&#32;error.</emphasis>
-00127 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00129 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;beforeAndAfter&#32;=&#32;input.split(&quot;[&quot;</emphasis>&#32;+&#32;str(self.contextError)&#32;+&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>)
-00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;before&#32;=&#32;beforeAndAfter[0]
-00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;after&#32;=&#32;beforeAndAfter[1]
-00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pre,&#32;post&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
-00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(before)&#32;&gt;&#32;2:
-00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pre&#32;=&#32;before.split(<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)[-2]
-00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;pre[:-1]&#32;==&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>:
-00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;post[:-1]
-00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(after)&#32;&gt;&#32;2:
-00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;after.split(<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)[1]
-00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;char&#32;<emphasis role="keywordflow">in</emphasis>&#32;post:
-00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;char&#32;<emphasis role="keywordflow">in</emphasis>&#32;<emphasis role="stringliteral">&quot;?.!/;:&quot;</emphasis>:
-00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;post.replace(char,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)
-00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pre,&#32;post
-00143 
+Definition at line <link linkend="__controller_8py_source_1l00122">122</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00122 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>extractPreAndPost(self,&#32;input):
+00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;the&#32;word&#32;before&#32;the&#32;error&#32;and&#32;the&#32;next&#32;word&#32;after&#32;the&#32;error.</emphasis>
+00124 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00126 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;beforeAndAfter&#32;=&#32;input.split(&quot;[&quot;</emphasis>&#32;+&#32;str(self.contextError)&#32;+&#32;<emphasis role="stringliteral">&quot;]&quot;</emphasis>)
+00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;before&#32;=&#32;beforeAndAfter[0]
+00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;after&#32;=&#32;beforeAndAfter[1]
+00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pre,&#32;post&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>
+00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(before)&#32;&gt;&#32;2:
+00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pre&#32;=&#32;before.split(<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)[-2]
+00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;pre[:-1]&#32;==&#32;<emphasis role="stringliteral">&quot;,&quot;</emphasis>:
+00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;post[:-1]
+00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(after)&#32;&gt;&#32;2:
+00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;after.split(<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)[1]
+00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;char&#32;<emphasis role="keywordflow">in</emphasis>&#32;post:
+00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;char&#32;<emphasis role="keywordflow">in</emphasis>&#32;<emphasis role="stringliteral">&quot;?.!/;:&quot;</emphasis>:
+00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;post&#32;=&#32;post.replace(char,&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)
+00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pre,&#32;post
+00140 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1afea363d31beb9f56ab6ba7cbe9318938"/><section>
     <title>extractWord()</title>
@@ -407,23 +399,13 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00119">119</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00119 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>extractWord(self,&#32;input):
-00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;only&#32;the&#32;contents&#32;of&#32;[*]&#32;contained&#32;within&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
-00121 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00123 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;input[input.find(<emphasis role="stringliteral">&quot;[&quot;</emphasis>)&#32;+&#32;1&#32;:&#32;input.find(<emphasis role="stringliteral">&quot;]&quot;</emphasis>)]
-00124 
-</programlisting></section>
-<anchor xml:id="_class_controller_1_1_controller_1a179aa818497a96016997c95b44ed1d3d"/><section>
-    <title>fitData()</title>
-<indexterm><primary>fitData</primary><secondary>Controller.Controller</secondary></indexterm>
-<indexterm><primary>Controller.Controller</primary><secondary>fitData</secondary></indexterm>
-<para><computeroutput>def Controller.Controller.fitData ( self,  input)</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00144">144</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00144 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>fitData(self,&#32;input):
-00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">pass</emphasis>
-00146 
+Definition at line <link linkend="__controller_8py_source_1l00116">116</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00116 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>extractWord(self,&#32;input):
+00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;only&#32;the&#32;contents&#32;of&#32;[*]&#32;contained&#32;within&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
+00118 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00120 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;input[input.find(<emphasis role="stringliteral">&quot;[&quot;</emphasis>)&#32;+&#32;1&#32;:&#32;input.find(<emphasis role="stringliteral">&quot;]&quot;</emphasis>)]
+00121 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a786551a4b53767e916ac06c06a4c20ed"/><section>
     <title>getEditDistance()</title>
@@ -461,28 +443,28 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00147">147</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00147 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getEditDistance(self,&#32;originalWord,&#32;stringCompared):
-00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;the&#32;edit&#32;distance&#32;between&#32;the&#32;original&#32;word&#32;and&#32;the&#32;string&#32;compared.</emphasis>
-00149 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;originalWord&#32;&#32;The&#32;original&#32;word&#32;given&#32;by&#32;the&#32;user
-00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;stringCompared&#32;&#32;The&#32;string&#32;to&#32;be&#32;compared&#32;to&#32;the&#32;original&#32;word
-00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00152 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">if</emphasis>&#32;len(originalWord)&#32;&lt;&#32;len(stringCompared):
-00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self.getEditDistance(stringCompared,&#32;originalWord)
-00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;When&#32;the&#32;originalWord&#32;is&#32;longer&#32;than&#32;the&#32;word&#32;to&#32;be&#32;compared&#32;with</emphasis>
-00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(stringCompared)&#32;==&#32;0:
-00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;len(originalWord)
-00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;previousRow&#32;=&#32;range(len(stringCompared)&#32;+&#32;1)
-00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;originalWordindex,&#32;charOne&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(originalWord):
-00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentRow&#32;=&#32;[originalWordindex&#32;+&#32;1]
-00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;comparedWordIndex,&#32;charTwo&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(stringCompared):
-00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;insertions&#32;=&#32;previous_row[comparedWordIndex&#32;+&#32;1]&#32;+&#32;1
-00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;deletions&#32;=&#32;currentRow[comparedWordIndex]&#32;+&#32;1
-00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;substitutions&#32;=&#32;previous_row[comparedWordIndex]&#32;+&#32;(charOne&#32;!=&#32;charTwo)
-00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentRow.append(min(insertions,&#32;deletions,&#32;substitutions))
-00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;previous_row&#32;=&#32;currentRow
-00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;previous_row[-1]
-00167 
+Definition at line <link linkend="__controller_8py_source_1l00141">141</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00141 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getEditDistance(self,&#32;originalWord,&#32;stringCompared):
+00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;the&#32;edit&#32;distance&#32;between&#32;the&#32;original&#32;word&#32;and&#32;the&#32;string&#32;compared.</emphasis>
+00143 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;originalWord&#32;&#32;The&#32;original&#32;word&#32;given&#32;by&#32;the&#32;user
+00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;stringCompared&#32;&#32;The&#32;string&#32;to&#32;be&#32;compared&#32;to&#32;the&#32;original&#32;word
+00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00146 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">if</emphasis>&#32;len(originalWord)&#32;&lt;&#32;len(stringCompared):
+00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self.getEditDistance(stringCompared,&#32;originalWord)
+00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;When&#32;the&#32;originalWord&#32;is&#32;longer&#32;than&#32;the&#32;word&#32;to&#32;be&#32;compared&#32;with</emphasis>
+00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;len(stringCompared)&#32;==&#32;0:
+00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;len(originalWord)
+00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;previousRow&#32;=&#32;range(len(stringCompared)&#32;+&#32;1)
+00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;originalWordindex,&#32;charOne&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(originalWord):
+00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentRow&#32;=&#32;[originalWordindex&#32;+&#32;1]
+00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;comparedWordIndex,&#32;charTwo&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(stringCompared):
+00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;insertions&#32;=&#32;previous_row[comparedWordIndex&#32;+&#32;1]&#32;+&#32;1
+00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;deletions&#32;=&#32;currentRow[comparedWordIndex]&#32;+&#32;1
+00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;substitutions&#32;=&#32;previous_row[comparedWordIndex]&#32;+&#32;(charOne&#32;!=&#32;charTwo)
+00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentRow.append(min(insertions,&#32;deletions,&#32;substitutions))
+00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;previous_row&#32;=&#32;currentRow
+00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;previous_row[-1]
+00161 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1aa59e5b734bcbd927d121f8928a52ede7"/><section>
     <title>getEditDistanceList()</title>
@@ -493,28 +475,18 @@ Definition at line <link linkend="__controller_8py_source_1l00147">147</link> of
 <para>Returns a list of the all potential words with the edit distances between the potential word and the original error. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00168">168</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00168 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getEditDistanceList(self):
-00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;a&#32;list&#32;of&#32;the&#32;all&#32;potential&#32;words&#32;with&#32;the&#32;edit&#32;distances&#32;between&#32;the&#32;potential&#32;word&#32;and&#32;the&#32;original&#32;error.&quot;&quot;&quot;</emphasis>
-00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;synsetList&#32;=&#32;self.modelResultsSynset
-00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;originalWord&#32;=&#32;self.contextError
-00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;editDistances&#32;=&#32;[]
-00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;word&#32;<emphasis role="keywordflow">in</emphasis>&#32;synsetList:
-00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;distance&#32;=&#32;self.shortGetEditDistance(originalWord,&#32;word)
-00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;editDistances.append(distance)
-00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combinedList&#32;=&#32;list(zip(synsetList,&#32;editDistances))
-00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;combinedList
-00178 
-</programlisting></section>
-<anchor xml:id="_class_controller_1_1_controller_1a44ec9d1e8a24e62eea33bc10a562c459"/><section>
-    <title>getError()</title>
-<indexterm><primary>getError</primary><secondary>Controller.Controller</secondary></indexterm>
-<indexterm><primary>Controller.Controller</primary><secondary>getError</secondary></indexterm>
-<para><computeroutput>def Controller.Controller.getError ( self,  input)</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00179">179</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00179 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getError(self,&#32;input):
-00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">pass</emphasis>
-00181 
+Definition at line <link linkend="__controller_8py_source_1l00162">162</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00162 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getEditDistanceList(self):
+00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;a&#32;list&#32;of&#32;the&#32;all&#32;potential&#32;words&#32;with&#32;the&#32;edit&#32;distances&#32;between&#32;the&#32;potential&#32;word&#32;and&#32;the&#32;original&#32;error.&quot;&quot;&quot;</emphasis>
+00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;synsetList&#32;=&#32;self.modelResultsSynset
+00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;originalWord&#32;=&#32;self.contextError
+00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;editDistances&#32;=&#32;[]
+00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;word&#32;<emphasis role="keywordflow">in</emphasis>&#32;synsetList:
+00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;distance&#32;=&#32;self.shortGetEditDistance(originalWord,&#32;word)
+00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;editDistances.append(distance)
+00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combinedList&#32;=&#32;list(zip(synsetList,&#32;editDistances))
+00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;combinedList
+00172 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a6cd1bb1533b44039e67913d2b54a01a6"/><section>
     <title>getModelPredictions()</title>
@@ -547,13 +519,13 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00182">182</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00182 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getModelPredictions(self,&#32;input):
-00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;a&#32;list&#32;of&#32;the&#32;models&#32;predictions&#32;based&#32;on&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
-00184 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00186 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;self.pipeline(input)
-00187 
+Definition at line <link linkend="__controller_8py_source_1l00173">173</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00173 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getModelPredictions(self,&#32;input):
+00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Returns&#32;a&#32;list&#32;of&#32;the&#32;models&#32;predictions&#32;based&#32;on&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
+00175 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00177 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;self.pipeline(input)
+00178 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a6d7024660385fa85ea0f5dd1a8cf715b"/><section>
     <title>getSimilarWords()</title>
@@ -586,15 +558,15 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00188">188</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00188 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getSimilarWords(self,&#32;input):
-00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
-00190 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00192 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;set()</emphasis>
-00193 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;difflib.get_close_matches(input,&#32;self.dictionary)</emphasis>
-00194 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;similarWords
-00195 
+Definition at line <link linkend="__controller_8py_source_1l00179">179</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00179 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getSimilarWords(self,&#32;input):
+00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Replaces&#32;the&#32;[*]&#32;contained&#32;input&#32;with&#32;a&#32;mask&#32;from&#32;the&#32;tokeniser.</emphasis>
+00181 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00183 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;set()</emphasis>
+00184 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;similarWords&#32;=&#32;difflib.get_close_matches(input,&#32;self.dictionary)</emphasis>
+00185 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;similarWords
+00186 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1ab8ae7bb8f2e1e7f06a3f08bc0632050b"/><section>
     <title>getSynsets()</title>
@@ -627,24 +599,24 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00196">196</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00196 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getSynsets(self,&#32;guessedWords):
-00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.</emphasis>
-00198 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;guessedWords&#32;A&#32;list&#32;of&#32;potential&#32;Guesses
-00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00200 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;guesses&#32;=&#32;set()</emphasis>
-00201 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList&#32;=&#32;set()</emphasis>
-00202 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">for</emphasis>&#32;guess&#32;<emphasis role="keywordflow">in</emphasis>&#32;guessedWords:
-00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;guesses.add(guess)
-00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;guess&#32;<emphasis role="keywordflow">in</emphasis>&#32;guesses:
-00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList.add(guess)
-00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;synsets&#32;=&#32;self.wordNet.synsets(guess)
-00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;synset&#32;<emphasis role="keywordflow">in</emphasis>&#32;synsets:
-00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;lemma&#32;<emphasis role="keywordflow">in</emphasis>&#32;synset.lemmas():
-00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(str(lemma.name())&#32;+&#32;<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>,&#32;end=<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)
-00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList.add(lemma.name().strip().replace(<emphasis role="stringliteral">&quot;_&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>).lower())
-00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;wordList
-00212 
+Definition at line <link linkend="__controller_8py_source_1l00187">187</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00187 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>getSynsets(self,&#32;guessedWords):
+00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.</emphasis>
+00189 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;guessedWords&#32;A&#32;list&#32;of&#32;potential&#32;Guesses
+00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00191 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;guesses&#32;=&#32;set()</emphasis>
+00192 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList&#32;=&#32;set()</emphasis>
+00193 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">for</emphasis>&#32;guess&#32;<emphasis role="keywordflow">in</emphasis>&#32;guessedWords:
+00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;guesses.add(guess)
+00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;guess&#32;<emphasis role="keywordflow">in</emphasis>&#32;guesses:
+00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList.add(guess)
+00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;synsets&#32;=&#32;self.wordNet.synsets(guess)
+00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;synset&#32;<emphasis role="keywordflow">in</emphasis>&#32;synsets:
+00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;lemma&#32;<emphasis role="keywordflow">in</emphasis>&#32;synset.lemmas():
+00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(str(lemma.name())&#32;+&#32;<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>,&#32;end=<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>)
+00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wordList.add(lemma.name().strip().replace(<emphasis role="stringliteral">&quot;_&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>).lower())
+00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;wordList
+00203 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a22d89b586f67574be91e5932f74a56d6"/><section>
     <title>loadBaseModel()</title>
@@ -655,12 +627,12 @@ Definition at line <link linkend="__controller_8py_source_1l00196">196</link> of
 <para>Loads and Returns the model for use by the program from hugginface.com. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00218">218</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00218 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadBaseModel(self):
-00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.&quot;&quot;&quot;</emphasis>
-00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model&#32;=&#32;AutoModelForMaskedLM.from_pretrained(MODELNAME)
-00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;model
-00222 
+Definition at line <link linkend="__controller_8py_source_1l00209">209</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00209 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadBaseModel(self):
+00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.&quot;&quot;&quot;</emphasis>
+00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model&#32;=&#32;AutoModelForMaskedLM.from_pretrained(MODELNAME)
+00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;model
+00213 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a01287a6cf026161bdcf462908477d349"/><section>
     <title>loadBaseTokenizer()</title>
@@ -671,12 +643,12 @@ Definition at line <link linkend="__controller_8py_source_1l00218">218</link> of
 <para>Loads and Returns the tokenizer for use by the program from hugginface.com. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00223">223</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00223 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadBaseTokenizer(self):
-00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;tokenizer&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.&quot;&quot;&quot;</emphasis>
-00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tokenizer&#32;=&#32;AutoTokenizer.from_pretrained(MODELNAME)
-00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;tokenizer
-00227 
+Definition at line <link linkend="__controller_8py_source_1l00214">214</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00214 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadBaseTokenizer(self):
+00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;tokenizer&#32;for&#32;use&#32;by&#32;the&#32;program&#32;from&#32;hugginface.com.&quot;&quot;&quot;</emphasis>
+00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tokenizer&#32;=&#32;AutoTokenizer.from_pretrained(MODELNAME)
+00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;tokenizer
+00218 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1af3e9d79eac0b7cdb8f91ce5962f9d4ca"/><section>
     <title>loadDictionary()</title>
@@ -687,12 +659,12 @@ Definition at line <link linkend="__controller_8py_source_1l00223">223</link> of
 <para>Loads and Returns the dictionary for use by the program based on the nltk corpus. </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00213">213</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00213 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadDictionary(self):
-00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;dictionary&#32;for&#32;use&#32;by&#32;the&#32;program&#32;based&#32;on&#32;the&#32;nltk&#32;corpus.&quot;&quot;&quot;</emphasis>
-00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dictionary&#32;=&#32;set(w.lower()&#32;<emphasis role="keywordflow">for</emphasis>&#32;w&#32;<emphasis role="keywordflow">in</emphasis>&#32;nltk.corpus.words.words())
-00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dictionary
-00217 
+Definition at line <link linkend="__controller_8py_source_1l00204">204</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00204 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadDictionary(self):
+00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;dictionary&#32;for&#32;use&#32;by&#32;the&#32;program&#32;based&#32;on&#32;the&#32;nltk&#32;corpus.&quot;&quot;&quot;</emphasis>
+00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dictionary&#32;=&#32;set(w.lower()&#32;<emphasis role="keywordflow">for</emphasis>&#32;w&#32;<emphasis role="keywordflow">in</emphasis>&#32;nltk.corpus.words.words())
+00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dictionary
+00208 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1af53e655391e6d2b325b1c2c6c5ee545c"/><section>
     <title>loadModel()</title>
@@ -725,13 +697,13 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00228">228</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00228 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadModel(self,&#32;path):
-00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;prepared&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program</emphasis>
-00230 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;path&#32;&#32;The&#32;directory&#32;path&#32;of&#32;the&#32;model
-00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00232 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;joblib.load(path)
-00233 
+Definition at line <link linkend="__controller_8py_source_1l00219">219</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00219 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadModel(self,&#32;path):
+00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;prepared&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program</emphasis>
+00221 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;path&#32;&#32;The&#32;directory&#32;path&#32;of&#32;the&#32;model
+00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00223 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;joblib.load(path)
+00224 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a2a06f91cbec4e350b8662b3047022248"/><section>
     <title>loadTokenizer()</title>
@@ -764,13 +736,13 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00234">234</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00234 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadTokenizer(self,&#32;path):
-00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;prepared&#32;tokenizer&#32;that&#32;corresponds&#32;to&#32;the&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program</emphasis>
-00236 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;path&#32;&#32;The&#32;directory&#32;path&#32;of&#32;the&#32;tokenizer
-00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00238 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;joblib.load(path)
-00239 
+Definition at line <link linkend="__controller_8py_source_1l00225">225</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00225 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>loadTokenizer(self,&#32;path):
+00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Loads&#32;and&#32;Returns&#32;the&#32;prepared&#32;tokenizer&#32;that&#32;corresponds&#32;to&#32;the&#32;the&#32;model&#32;for&#32;use&#32;by&#32;the&#32;program</emphasis>
+00227 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;path&#32;&#32;The&#32;directory&#32;path&#32;of&#32;the&#32;tokenizer
+00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00229 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;joblib.load(path)
+00230 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a3e7e76ff118b519ace9caa49d5885b71"/><section>
     <title>processInput()</title>
@@ -803,61 +775,61 @@ Parameters</title>
                 </formalpara>
                 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00240">240</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00240 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>processInput(self,&#32;input:&#32;str):
-00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Main&#32;functionality&#32;of&#32;the&#32;program&#32;that&#32;processes&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
-00242 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@type</emphasis>&#32;input:&#32;str
-00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
-00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00245 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">if</emphasis>&#32;self.containsError(input):
-00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;word&#32;that&#32;is&#32;the&#32;error</emphasis>
-00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.contextError&#32;=&#32;self.extractWord(input)
-00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;get&#32;word&#32;before&#32;the&#32;error&#32;and&#32;after&#32;the&#32;error</emphasis>
-00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.preWord,&#32;self.postWord&#32;=&#32;self.extractPreAndPost(input)
-00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;replaces&#32;the&#32;error&#32;with&#32;an&#32;appropriate&#32;mask</emphasis>
-00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.maskedInput&#32;=&#32;self.addMask(input)
-00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;get&#32;the&#32;model&#32;predictions</emphasis>
-00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResults&#32;=&#32;self.getModelPredictions(self.maskedInput)
-00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset&#32;=&#32;[]
-00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;for&#32;each&#32;prediction&#32;made:</emphasis>
-00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;prediction&#32;<emphasis role="keywordflow">in</emphasis>&#32;self.modelResults:
-00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;predicted&#32;word</emphasis>
-00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prediction&#32;=&#32;prediction.get(<emphasis role="stringliteral">&quot;token_str&quot;</emphasis>).strip()
-00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;creates&#32;a&#32;list&#32;of&#32;three&#32;words&#32;to&#32;create&#32;two&#32;bigrams&#32;for&#32;comparison</emphasis>
-00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList&#32;=&#32;[]
-00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(self.preWord)
-00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(prediction)
-00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(self.postWord)
-00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramList&#32;=&#32;list(nltk.bigrams(bigramRawInputList))
-00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramJoinedList&#32;=&#32;[]
-00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;joins&#32;words&#32;with&#32;a&#32;space&#32;for&#32;each&#32;bigram</emphasis>
-00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;bigram&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramList:
-00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigram&#32;=&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>.join(bigram)
-00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramJoinedList.append(bigram)
-00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramFinalList&#32;=&#32;bigramJoinedList[:]
-00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramFinalList.append(prediction)
-00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;synsets&#32;for&#32;each&#32;bigram&#32;in&#32;the&#32;list</emphasis>
-00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramListResults&#32;=&#32;self.getSynsets(bigramFinalList)
-00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Filter&#32;out&#32;the&#32;bigrams&#32;only</emphasis>
-00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;word&#32;<emphasis role="keywordflow">in</emphasis>&#32;list(bigramListResults):
-00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;bigram&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramJoinedList:
-00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;word&#32;==&#32;bigram:
-00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramListResults.remove(word)
-00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;appends&#32;the&#32;synsets&#32;to&#32;the&#32;full&#32;list&#32;of&#32;synsets</emphasis>
-00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;result&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramListResults:
-00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset.append(result)
-00282 
-00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Filter&#32;out&#32;any&#32;duplicates&#32;that&#32;may&#32;be&#32;present</emphasis>
-00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset&#32;=&#32;list(set(self.modelResultsSynset))
-00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;returns&#32;a&#32;set&#32;of&#32;lists&#32;that&#32;adds&#32;the&#32;edit&#32;distance&#32;to&#32;each&#32;word&#32;in&#32;the&#32;set</emphasis>
-00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances&#32;=&#32;self.getEditDistanceList()
-00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;sorts&#32;the&#32;list&#32;according&#32;to&#32;the&#32;edit&#32;distance&#32;in&#32;ascending&#32;order</emphasis>
-00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.sortEditDistances()
-00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Return&#32;the&#32;top&#32;10&#32;results&#32;by&#32;shortest&#32;edit&#32;distance&#32;compared&#32;to&#32;the&#32;error</emphasis>
-00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self.editDistances[:10]
-00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
-00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">pass</emphasis>
-00293 
+Definition at line <link linkend="__controller_8py_source_1l00231">231</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00231 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>processInput(self,&#32;input:&#32;str):
+00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Main&#32;functionality&#32;of&#32;the&#32;program&#32;that&#32;processes&#32;the&#32;input&#32;given&#32;by&#32;the&#32;user.</emphasis>
+00233 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@type</emphasis>&#32;input:&#32;str
+00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;input&#32;&#32;The&#32;complete&#32;input&#32;given&#32;by&#32;the&#32;user
+00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00236 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">if</emphasis>&#32;self.containsError(input):
+00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;word&#32;that&#32;is&#32;the&#32;error</emphasis>
+00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.contextError&#32;=&#32;self.extractWord(input)
+00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;get&#32;word&#32;before&#32;the&#32;error&#32;and&#32;after&#32;the&#32;error</emphasis>
+00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.preWord,&#32;self.postWord&#32;=&#32;self.extractPreAndPost(input)
+00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;replaces&#32;the&#32;error&#32;with&#32;an&#32;appropriate&#32;mask</emphasis>
+00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.maskedInput&#32;=&#32;self.addMask(input)
+00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;get&#32;the&#32;model&#32;predictions</emphasis>
+00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResults&#32;=&#32;self.getModelPredictions(self.maskedInput)
+00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset&#32;=&#32;[]
+00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;for&#32;each&#32;prediction&#32;made:</emphasis>
+00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;prediction&#32;<emphasis role="keywordflow">in</emphasis>&#32;self.modelResults:
+00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;predicted&#32;word</emphasis>
+00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prediction&#32;=&#32;prediction.get(<emphasis role="stringliteral">&quot;token_str&quot;</emphasis>).strip()
+00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;creates&#32;a&#32;list&#32;of&#32;three&#32;words&#32;to&#32;create&#32;two&#32;bigrams&#32;for&#32;comparison</emphasis>
+00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList&#32;=&#32;[]
+00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(self.preWord)
+00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(prediction)
+00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramRawInputList.append(self.postWord)
+00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramList&#32;=&#32;list(nltk.bigrams(bigramRawInputList))
+00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramJoinedList&#32;=&#32;[]
+00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;joins&#32;words&#32;with&#32;a&#32;space&#32;for&#32;each&#32;bigram</emphasis>
+00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;bigram&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramList:
+00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigram&#32;=&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>.join(bigram)
+00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramJoinedList.append(bigram)
+00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramFinalList&#32;=&#32;bigramJoinedList[:]
+00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramFinalList.append(prediction)
+00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;gets&#32;the&#32;synsets&#32;for&#32;each&#32;bigram&#32;in&#32;the&#32;list</emphasis>
+00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramListResults&#32;=&#32;self.getSynsets(bigramFinalList)
+00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Filter&#32;out&#32;the&#32;bigrams&#32;only</emphasis>
+00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;word&#32;<emphasis role="keywordflow">in</emphasis>&#32;list(bigramListResults):
+00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;bigram&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramJoinedList:
+00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;word&#32;==&#32;bigram:
+00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bigramListResults.remove(word)
+00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;appends&#32;the&#32;synsets&#32;to&#32;the&#32;full&#32;list&#32;of&#32;synsets</emphasis>
+00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;result&#32;<emphasis role="keywordflow">in</emphasis>&#32;bigramListResults:
+00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset.append(result)
+00273 
+00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Filter&#32;out&#32;any&#32;duplicates&#32;that&#32;may&#32;be&#32;present</emphasis>
+00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.modelResultsSynset&#32;=&#32;list(set(self.modelResultsSynset))
+00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;returns&#32;a&#32;set&#32;of&#32;lists&#32;that&#32;adds&#32;the&#32;edit&#32;distance&#32;to&#32;each&#32;word&#32;in&#32;the&#32;set</emphasis>
+00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances&#32;=&#32;self.getEditDistanceList()
+00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;sorts&#32;the&#32;list&#32;according&#32;to&#32;the&#32;edit&#32;distance&#32;in&#32;ascending&#32;order</emphasis>
+00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.sortEditDistances()
+00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Return&#32;the&#32;top&#32;10&#32;results&#32;by&#32;shortest&#32;edit&#32;distance&#32;compared&#32;to&#32;the&#32;error</emphasis>
+00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self.editDistances[:10]
+00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">pass</emphasis>
+00284 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1a5dfc2051795ea4ec97417ba222f57697"/><section>
     <title>shortGetEditDistance()</title>
@@ -899,39 +871,18 @@ Parameters</title>
 </formalpara>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00294">294</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00294 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>shortGetEditDistance(self,&#32;originalWord,&#32;stringCompared):
-00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Gets&#32;the&#32;edit&#32;distance&#32;required&#32;to&#32;change&#32;strignCompared&#32;into&#32;original&#32;Word&#32;using&#32;the&#32;levenshtein&#32;method</emphasis>
-00296 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;originalWord&#32;&#32;The&#32;word&#32;to&#32;be&#32;compared&#32;to
-00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;stringCompared&#32;&#32;The&#32;word&#32;to&#32;be&#32;compared&#32;to&#32;the&#32;original&#32;word
-00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@return</emphasis>&#32;The&#32;edit&#32;distance&#32;between&#32;the&#32;two&#32;words
-00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
-00300 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;originalWord&#32;=&#32;originalWord.lower()</emphasis>
-00301 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stringCompared&#32;=&#32;stringCompared.lower()</emphasis>
-00302 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;distance&#32;=&#32;leven.distance(originalWord,&#32;stringCompared)</emphasis>
-00303 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;distance
-00304 
-</programlisting></section>
-<anchor xml:id="_class_controller_1_1_controller_1abcb06d1dc6adaa1b7cb78a6e3db227df"/><section>
-    <title>show()</title>
-<indexterm><primary>show</primary><secondary>Controller.Controller</secondary></indexterm>
-<indexterm><primary>Controller.Controller</primary><secondary>show</secondary></indexterm>
-<para><computeroutput>def Controller.Controller.show ( self)</computeroutput></para><para>
-
-<para>prints all main data members of the class </para>
-</para>
-<para>
-Definition at line <link linkend="__controller_8py_source_1l00305">305</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00305 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>show(self):
-00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;prints&#32;all&#32;main&#32;data&#32;members&#32;of&#32;the&#32;class&quot;&quot;&quot;</emphasis>
-00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.modelResults)
-00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.wordNet)
-00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.modelGuessSynset)
-00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.editDistances)
-00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.model)
-00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.tokenizer)
-00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(self.pipeline)
-00314 
+Definition at line <link linkend="__controller_8py_source_1l00285">285</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00285 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>shortGetEditDistance(self,&#32;originalWord,&#32;stringCompared):
+00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Gets&#32;the&#32;edit&#32;distance&#32;required&#32;to&#32;change&#32;strignCompared&#32;into&#32;original&#32;Word&#32;using&#32;the&#32;levenshtein&#32;method</emphasis>
+00287 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor">@param</emphasis>&#32;originalWord&#32;&#32;The&#32;word&#32;to&#32;be&#32;compared&#32;to
+00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@param</emphasis>&#32;stringCompared&#32;&#32;The&#32;word&#32;to&#32;be&#32;compared&#32;to&#32;the&#32;original&#32;word
+00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="preprocessor">@return</emphasis>&#32;The&#32;edit&#32;distance&#32;between&#32;the&#32;two&#32;words
+00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;</emphasis>
+00291 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;originalWord&#32;=&#32;originalWord.lower()</emphasis>
+00292 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;stringCompared&#32;=&#32;stringCompared.lower()</emphasis>
+00293 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;distance&#32;=&#32;leven.distance(originalWord,&#32;stringCompared)</emphasis>
+00294 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="keywordflow">return</emphasis>&#32;distance
+00295 
 </programlisting></section>
 <anchor xml:id="_class_controller_1_1_controller_1af44c825436585bbcd07455352e9dc8e7"/><section>
     <title>sortEditDistances()</title>
@@ -942,10 +893,10 @@ Definition at line <link linkend="__controller_8py_source_1l00305">305</link> of
 <para>sorts the list of lists by the edit distance in ascending order </para>
 </para>
 <para>
-Definition at line <link linkend="__controller_8py_source_1l00315">315</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
-<programlisting linenumbering="unnumbered">00315 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>sortEditDistances(self):
-00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;sorts&#32;the&#32;list&#32;of&#32;lists&#32;by&#32;the&#32;edit&#32;distance&#32;in&#32;ascending&#32;order&quot;&quot;&quot;</emphasis>
-00317 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances.sort(key=itemgetter(1))</emphasis>
+Definition at line <link linkend="__controller_8py_source_1l00296">296</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+<programlisting linenumbering="unnumbered">00296 &#32;&#32;&#32;&#32;<emphasis role="keyword">def&#32;</emphasis>sortEditDistances(self):
+00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;sorts&#32;the&#32;list&#32;of&#32;lists&#32;by&#32;the&#32;edit&#32;distance&#32;in&#32;ascending&#32;order&quot;&quot;&quot;</emphasis>
+00298 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.editDistances.sort(key=itemgetter(1))</emphasis>
 </programlisting></section>
 </section>
 <section>
@@ -955,112 +906,112 @@ Definition at line <link linkend="__controller_8py_source_1l00315">315</link> of
 <indexterm><primary>contextError</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>contextError</secondary></indexterm>
 <para><computeroutput>Controller.Controller.contextError</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00071">71</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00068">68</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1ab7e30b0aab77c733ec3f88425d175954"/><section>
     <title>dictionary</title>
 <indexterm><primary>dictionary</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>dictionary</secondary></indexterm>
 <para><computeroutput>Controller.Controller.dictionary</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00080">80</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00077">77</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a2b8eabdd4ea1ac9f31368b64f72d12f4"/><section>
     <title>editDistances</title>
 <indexterm><primary>editDistances</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>editDistances</secondary></indexterm>
 <para><computeroutput>Controller.Controller.editDistances</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00078">78</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00075">75</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a664d2bba1b9baee6672e0e233bffb8aa"/><section>
     <title>maskedInput</title>
 <indexterm><primary>maskedInput</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>maskedInput</secondary></indexterm>
 <para><computeroutput>Controller.Controller.maskedInput</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00251">251</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00242">242</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a147f1744acd980948a67709747fc382b"/><section>
     <title>model</title>
 <indexterm><primary>model</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>model</secondary></indexterm>
 <para><computeroutput>Controller.Controller.model</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00073">73</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00070">70</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1aeffc254b8725ff40b46c077df12884f3"/><section>
     <title>modelGuessSynset</title>
 <indexterm><primary>modelGuessSynset</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>modelGuessSynset</secondary></indexterm>
 <para><computeroutput>Controller.Controller.modelGuessSynset</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00077">77</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00074">74</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a56ca938edde13ee70e9a2eae0b0d239a"/><section>
     <title>modelResults</title>
 <indexterm><primary>modelResults</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>modelResults</secondary></indexterm>
 <para><computeroutput>Controller.Controller.modelResults</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00076">76</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00073">73</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a35f6a1e97c4d9f52549ad22b723ac427"/><section>
     <title>modelResultsSynset</title>
 <indexterm><primary>modelResultsSynset</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>modelResultsSynset</secondary></indexterm>
 <para><computeroutput>Controller.Controller.modelResultsSynset</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00254">254</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00245">245</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1ac30a8a8c8a3b21f7a93142f75118f4a6"/><section>
     <title>pipeline</title>
 <indexterm><primary>pipeline</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>pipeline</secondary></indexterm>
 <para><computeroutput>Controller.Controller.pipeline</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00075">75</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00072">72</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1acf95ddb8d11ce86b2a022c3e2406efaa"/><section>
     <title>postWord</title>
 <indexterm><primary>postWord</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>postWord</secondary></indexterm>
 <para><computeroutput>Controller.Controller.postWord</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00083">83</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00080">80</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a39a8f0ae9a5502e9b5f68b010b5e34c3"/><section>
     <title>predictedValues</title>
 <indexterm><primary>predictedValues</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>predictedValues</secondary></indexterm>
 <para><computeroutput>Controller.Controller.predictedValues</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00079">79</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00076">76</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a30a4bb3c6517f2ff765d5b2758675bdb"/><section>
     <title>preWord</title>
 <indexterm><primary>preWord</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>preWord</secondary></indexterm>
 <para><computeroutput>Controller.Controller.preWord</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00082">82</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00079">79</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a54fc49953ce72a0cbec230685dd55db3"/><section>
     <title>similarWords</title>
 <indexterm><primary>similarWords</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>similarWords</secondary></indexterm>
 <para><computeroutput>Controller.Controller.similarWords</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00081">81</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00078">78</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a6e91e1c22bc68f6ce15aa145a8c6be41"/><section>
     <title>tokenizer</title>
 <indexterm><primary>tokenizer</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>tokenizer</secondary></indexterm>
 <para><computeroutput>Controller.Controller.tokenizer</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00074">74</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00071">71</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1a0caef8eaea886ed39a338ccdeccd71c2"/><section>
     <title>wordNet</title>
 <indexterm><primary>wordNet</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>wordNet</secondary></indexterm>
 <para><computeroutput>Controller.Controller.wordNet</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00072">72</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00069">69</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_class_controller_1_1_controller_1ad44ef082adb51a06959354946bb85a25"/><section>
     <title>wordSet</title>
 <indexterm><primary>wordSet</primary><secondary>Controller.Controller</secondary></indexterm>
 <indexterm><primary>Controller.Controller</primary><secondary>wordSet</secondary></indexterm>
 <para><computeroutput>Controller.Controller.wordSet</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00084">84</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00081">81</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>

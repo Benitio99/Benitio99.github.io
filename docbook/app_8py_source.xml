@@ -1,59 +1,52 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_app_8py_source" xml:lang="en-US">
 <title>C:/Users/unumuser/OneDrive - Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/app.py</title>
-Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_app_8py_source_1l00001"/><link linkend="_namespaceapp">00001</link> <emphasis role="keyword">from</emphasis>&#32;flask&#32;<emphasis role="keyword">import</emphasis>&#32;Flask,&#32;render_template,&#32;request,&#32;session,&#32;jsonify
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_app_8py_source_1l00001"/><link linkend="_namespaceapp">00001</link> <emphasis role="keyword">from</emphasis>&#32;flask&#32;<emphasis role="keyword">import</emphasis>&#32;Flask,&#32;render_template,&#32;request,&#32;session
 <anchor xml:id="_app_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;Controller
-<anchor xml:id="_app_8py_source_1l00003"/>00003 <emphasis role="keyword">import</emphasis>&#32;os
-<anchor xml:id="_app_8py_source_1l00004"/>00004 
-<anchor xml:id="_app_8py_source_1l00005"/><link linkend="_namespaceapp_1a675b4ea702c13dc4b8c05f985a25b496">00005</link> app&#32;=&#32;Flask(__name__)
-<anchor xml:id="_app_8py_source_1l00006"/><link linkend="_namespaceapp_1ab97b4dc4c1d36802b081c79135c567ca">00006</link> controller&#32;=&#32;<link linkend="_class_controller_1_1_controller">Controller.Controller</link>()
+<anchor xml:id="_app_8py_source_1l00003"/>00003 
+<anchor xml:id="_app_8py_source_1l00004"/><link linkend="_namespaceapp_1a675b4ea702c13dc4b8c05f985a25b496">00004</link> app&#32;=&#32;Flask(__name__)
+<anchor xml:id="_app_8py_source_1l00005"/><link linkend="_namespaceapp_1ab97b4dc4c1d36802b081c79135c567ca">00005</link> controller&#32;=&#32;<link linkend="_class_controller_1_1_controller">Controller.Controller</link>()
+<anchor xml:id="_app_8py_source_1l00006"/>00006 
 <anchor xml:id="_app_8py_source_1l00007"/>00007 
-<anchor xml:id="_app_8py_source_1l00008"/>00008 
-<anchor xml:id="_app_8py_source_1l00009"/>00009 <emphasis role="preprocessor">@app.route(&quot;/&quot;)</emphasis>
-<anchor xml:id="_app_8py_source_1l00010"/>00010 <emphasis role="preprocessor">@app.route(&quot;/index&quot;)</emphasis>
-<anchor xml:id="_app_8py_source_1l00011"/><link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">00011</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">displayHomepage</link>():
-<anchor xml:id="_app_8py_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Serves&#32;the&#32;initial&#32;homepage&#32;of&#32;the&#32;application.&quot;&quot;&quot;</emphasis>
-<anchor xml:id="_app_8py_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;SpellChecker&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00008"/>00008 <emphasis role="preprocessor">@app.route(&quot;/&quot;)</emphasis>
+<anchor xml:id="_app_8py_source_1l00009"/>00009 <emphasis role="preprocessor">@app.route(&quot;/index&quot;)</emphasis>
+<anchor xml:id="_app_8py_source_1l00010"/><link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">00010</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">displayHomepage</link>():
+<anchor xml:id="_app_8py_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Serves&#32;the&#32;initial&#32;homepage&#32;of&#32;the&#32;application.&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;SpellChecker&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00013"/>00013 
 <anchor xml:id="_app_8py_source_1l00014"/>00014 
-<anchor xml:id="_app_8py_source_1l00015"/>00015 
-<anchor xml:id="_app_8py_source_1l00016"/>00016 <emphasis role="preprocessor">@app.route(&quot;/&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
-<anchor xml:id="_app_8py_source_1l00017"/>00017 <emphasis role="preprocessor">@app.route(&quot;/index&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
-<anchor xml:id="_app_8py_source_1l00018"/><link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">00018</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">displayResults</link>():
-<anchor xml:id="_app_8py_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Requests&#32;results&#32;from&#32;the&#32;model&#32;and&#32;updates&#32;the&#32;page&quot;&quot;&quot;</emphasis>
-<anchor xml:id="_app_8py_source_1l00020"/>00020 &#32;&#32;&#32;&#32;session[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]&#32;=&#32;inputText&#32;=&#32;request.form[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]
-<anchor xml:id="_app_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;controller.containsError(inputText):
-<anchor xml:id="_app_8py_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matches&#32;=&#32;controller.processInput(inputText)
-<anchor xml:id="_app_8py_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;best&#32;=&#32;matches[:1]
-<anchor xml:id="_app_8py_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;word&#32;=&#32;next(iter(next(iter(best))))
-<anchor xml:id="_app_8py_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(
-<anchor xml:id="_app_8py_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;results.html&quot;</emphasis>,
-<anchor xml:id="_app_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;title=<emphasis role="stringliteral">&quot;Here&#32;are&#32;your&#32;results&quot;</emphasis>,
-<anchor xml:id="_app_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data=matches,
-<anchor xml:id="_app_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sentence=inputText,
-<anchor xml:id="_app_8py_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;top=word,
-<anchor xml:id="_app_8py_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
-<anchor xml:id="_app_8py_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
-<anchor xml:id="_app_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;Please&#32;enter&#32;a&#32;valid&#32;input&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00015"/>00015 <emphasis role="preprocessor">@app.route(&quot;/&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
+<anchor xml:id="_app_8py_source_1l00016"/>00016 <emphasis role="preprocessor">@app.route(&quot;/index&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
+<anchor xml:id="_app_8py_source_1l00017"/><link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">00017</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">displayResults</link>():
+<anchor xml:id="_app_8py_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Requests&#32;results&#32;from&#32;the&#32;model&#32;and&#32;updates&#32;the&#32;page&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00019"/>00019 &#32;&#32;&#32;&#32;session[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]&#32;=&#32;inputText&#32;=&#32;request.form[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]
+<anchor xml:id="_app_8py_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;controller.containsError(inputText):
+<anchor xml:id="_app_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matches&#32;=&#32;controller.processInput(inputText)
+<anchor xml:id="_app_8py_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;best&#32;=&#32;matches[:1]
+<anchor xml:id="_app_8py_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;word&#32;=&#32;next(iter(next(iter(best))))
+<anchor xml:id="_app_8py_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(
+<anchor xml:id="_app_8py_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;results.html&quot;</emphasis>,
+<anchor xml:id="_app_8py_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;title=<emphasis role="stringliteral">&quot;Here&#32;are&#32;your&#32;results&quot;</emphasis>,
+<anchor xml:id="_app_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data=matches,
+<anchor xml:id="_app_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sentence=inputText,
+<anchor xml:id="_app_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;top=word,
+<anchor xml:id="_app_8py_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+<anchor xml:id="_app_8py_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_app_8py_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;Please&#32;enter&#32;a&#32;valid&#32;input&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00033"/>00033 
 <anchor xml:id="_app_8py_source_1l00034"/>00034 
-<anchor xml:id="_app_8py_source_1l00035"/>00035 
-<anchor xml:id="_app_8py_source_1l00036"/>00036 <emphasis role="preprocessor">@app.route(&quot;/shutdown&quot;,&#32;methods=[&quot;GET&quot;])</emphasis>
-<anchor xml:id="_app_8py_source_1l00037"/><link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">00037</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">shutdown</link>():
-<anchor xml:id="_app_8py_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Shutsdown&#32;the&#32;server&quot;&quot;&quot;</emphasis>
-<anchor xml:id="_app_8py_source_1l00039"/>00039 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;shutdown_func&#32;=&#32;request.environ.get(&quot;werkzeug.server.shutdown&quot;</emphasis>)
-<anchor xml:id="_app_8py_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;shutdown_func&#32;<emphasis role="keywordflow">is</emphasis>&#32;<emphasis role="keywordtype">None</emphasis>:
-<anchor xml:id="_app_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">raise</emphasis>&#32;RuntimeError(<emphasis role="stringliteral">&quot;Not&#32;running&#32;werkzeug&quot;</emphasis>)
-<anchor xml:id="_app_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;shutdown_func()
-<anchor xml:id="_app_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Shutting&#32;down...&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00035"/>00035 <emphasis role="preprocessor">@app.route(&quot;/shutdown&quot;,&#32;methods=[&quot;GET&quot;])</emphasis>
+<anchor xml:id="_app_8py_source_1l00036"/><link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">00036</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">shutdown</link>():
+<anchor xml:id="_app_8py_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Shutsdown&#32;the&#32;server&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00038"/>00038 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;shutdown_func&#32;=&#32;request.environ.get(&quot;werkzeug.server.shutdown&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;shutdown_func&#32;<emphasis role="keywordflow">is</emphasis>&#32;<emphasis role="keywordtype">None</emphasis>:
+<anchor xml:id="_app_8py_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">raise</emphasis>&#32;RuntimeError(<emphasis role="stringliteral">&quot;Not&#32;running&#32;werkzeug&quot;</emphasis>)
+<anchor xml:id="_app_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;shutdown_func()
+<anchor xml:id="_app_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Shutting&#32;down...&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00043"/>00043 
 <anchor xml:id="_app_8py_source_1l00044"/>00044 
-<anchor xml:id="_app_8py_source_1l00045"/>00045 
-<anchor xml:id="_app_8py_source_1l00046"/>00046 <emphasis role="preprocessor">@app.route(&quot;/documentation&quot;)</emphasis>
-<anchor xml:id="_app_8py_source_1l00047"/><link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">00047</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">displayDocumentation</link>():
-<anchor xml:id="_app_8py_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Serves&#32;the&#32;Documentation&#32;for&#32;the&#32;program.&quot;&quot;&quot;</emphasis>
-<anchor xml:id="_app_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;/documentation/html/index.html&quot;</emphasis>)
-<anchor xml:id="_app_8py_source_1l00050"/>00050 
-<anchor xml:id="_app_8py_source_1l00051"/>00051 
-<anchor xml:id="_app_8py_source_1l00052"/>00052 app.secret_key&#32;=&#32;<emphasis role="stringliteral">&quot;123456789qwertyuiopasdfghjklzxcvbnm&quot;</emphasis>
-<anchor xml:id="_app_8py_source_1l00053"/>00053 
-<anchor xml:id="_app_8py_source_1l00054"/>00054 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
-<anchor xml:id="_app_8py_source_1l00055"/><link linkend="_namespaceapp_1a7fa7c11c7474c128736b1d34b15a0d5e">00055</link> &#32;&#32;&#32;&#32;app.run(host=<emphasis role="stringliteral">&quot;127.0.0.1&quot;</emphasis>,&#32;port=5000)
+<anchor xml:id="_app_8py_source_1l00045"/>00045 app.secret_key&#32;=&#32;<emphasis role="stringliteral">&quot;123456789qwertyuiopasdfghjklzxcvbnm&quot;</emphasis>
+<anchor xml:id="_app_8py_source_1l00046"/>00046 
+<anchor xml:id="_app_8py_source_1l00047"/>00047 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_app_8py_source_1l00048"/><link linkend="_namespaceapp_1a7fa7c11c7474c128736b1d34b15a0d5e">00048</link> &#32;&#32;&#32;&#32;app.run(host=<emphasis role="stringliteral">&quot;127.0.0.1&quot;</emphasis>,&#32;port=5000)
 </programlisting></section>

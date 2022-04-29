@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['geteditdistance_0',['getEditDistance',['../class_controller_1_1_controller.html#a786551a4b53767e916ac06c06a4c20ed',1,'Controller::Controller']]],
-  ['geteditdistancelist_1',['getEditDistanceList',['../class_controller_1_1_controller.html#aa59e5b734bcbd927d121f8928a52ede7',1,'Controller::Controller']]],
-  ['geterror_2',['getError',['../class_controller_1_1_controller.html#a44ec9d1e8a24e62eea33bc10a562c459',1,'Controller::Controller']]],
-  ['getmodelpredictions_3',['getModelPredictions',['../class_controller_1_1_controller.html#a6cd1bb1533b44039e67913d2b54a01a6',1,'Controller::Controller']]],
-  ['getsimilarwords_4',['getSimilarWords',['../class_controller_1_1_controller.html#a6d7024660385fa85ea0f5dd1a8cf715b',1,'Controller::Controller']]],
-  ['getsynsets_5',['getSynsets',['../class_controller_1_1_controller.html#ab8ae7bb8f2e1e7f06a3f08bc0632050b',1,'Controller::Controller']]]
+  ['loadbasemodel_0',['loadBaseModel',['../class_controller_1_1_controller.html#a22d89b586f67574be91e5932f74a56d6',1,'Controller::Controller']]],
+  ['loadbasetokenizer_1',['loadBaseTokenizer',['../class_controller_1_1_controller.html#a01287a6cf026161bdcf462908477d349',1,'Controller::Controller']]],
+  ['loaddictionary_2',['loadDictionary',['../class_controller_1_1_controller.html#af3e9d79eac0b7cdb8f91ce5962f9d4ca',1,'Controller::Controller']]],
+  ['loadmodel_3',['loadModel',['../class_controller_1_1_controller.html#af53e655391e6d2b325b1c2c6c5ee545c',1,'Controller::Controller']]],
+  ['loadtokenizer_4',['loadTokenizer',['../class_controller_1_1_controller.html#a2a06f91cbec4e350b8662b3047022248',1,'Controller::Controller']]]
 ];

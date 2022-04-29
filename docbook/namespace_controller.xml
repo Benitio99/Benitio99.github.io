@@ -43,35 +43,35 @@
 <indexterm><primary>DATADIRECTORY</primary><secondary>Controller</secondary></indexterm>
 <indexterm><primary>Controller</primary><secondary>DATADIRECTORY</secondary></indexterm>
 <para><computeroutput>string Controller.DATADIRECTORY = &quot;data/&quot;</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00055">55</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00054">54</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_namespace_controller_1a78fbfe0377be4cc5daaf3537ff9420bd"/><section>
     <title>MODELLOCATION</title>
 <indexterm><primary>MODELLOCATION</primary><secondary>Controller</secondary></indexterm>
 <indexterm><primary>Controller</primary><secondary>MODELLOCATION</secondary></indexterm>
 <para><computeroutput>string Controller.MODELLOCATION = <link linkend="_namespace_controller_1a4a852543a5f6a45daeba4cc0a6e89b92">DATADIRECTORY</link> + <link linkend="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933">MODELNAME</link> + &quot;/&quot; + <link linkend="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933">MODELNAME</link> + &quot;Model&quot;</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00057">57</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00056">56</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933"/><section>
     <title>MODELNAME</title>
 <indexterm><primary>MODELNAME</primary><secondary>Controller</secondary></indexterm>
 <indexterm><primary>Controller</primary><secondary>MODELNAME</secondary></indexterm>
 <para><computeroutput>string Controller.MODELNAME = &quot;distilroberta-base&quot;</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00056">56</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00055">55</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_namespace_controller_1a3773961c95a7982c623341e865b7da72"/><section>
     <title>PIPELINETYPE</title>
 <indexterm><primary>PIPELINETYPE</primary><secondary>Controller</secondary></indexterm>
 <indexterm><primary>Controller</primary><secondary>PIPELINETYPE</secondary></indexterm>
 <para><computeroutput>string Controller.PIPELINETYPE = &quot;fill-mask&quot;</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00059">59</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00058">58</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 <anchor xml:id="_namespace_controller_1aa9293e0ab92c7316e2f62dd2285a4378"/><section>
     <title>TOKENIZERLOCATION</title>
 <indexterm><primary>TOKENIZERLOCATION</primary><secondary>Controller</secondary></indexterm>
 <indexterm><primary>Controller</primary><secondary>TOKENIZERLOCATION</secondary></indexterm>
 <para><computeroutput>string Controller.TOKENIZERLOCATION = <link linkend="_namespace_controller_1a4a852543a5f6a45daeba4cc0a6e89b92">DATADIRECTORY</link> + <link linkend="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933">MODELNAME</link> + &quot;/&quot; + <link linkend="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933">MODELNAME</link> + &quot;Tokenizer&quot;</computeroutput></para><para>
-Definition at line <link linkend="__controller_8py_source_1l00058">58</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+Definition at line <link linkend="__controller_8py_source_1l00057">57</link> of file <link linkend="__controller_8py_source">Controller.py</link>.</para>
 </section>
 </section>
 </section>

@@ -1,7 +1,6 @@
 var namespaces_dup =
 [
     [ "app", "namespaceapp.html", [
-      [ "displayDocumentation", "namespaceapp.html#affabdd882d8c940cefb64ced31021c66", null ],
       [ "displayHomepage", "namespaceapp.html#a2b8c7dbdf96c543332bfd7861692e44e", null ],
       [ "displayResults", "namespaceapp.html#a6a8aede1b182a37b484e8204a119d007", null ],
       [ "shutdown", "namespaceapp.html#a2f62c8fee353c7bb1339007a8235ce12", null ],

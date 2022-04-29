@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tokenizer_0',['tokenizer',['../class_controller_1_1_controller.html#a6e91e1c22bc68f6ce15aa145a8c6be41',1,'Controller::Controller']]],
-  ['tokenizerlocation_1',['TOKENIZERLOCATION',['../namespace_controller.html#aa9293e0ab92c7316e2f62dd2285a4378',1,'Controller']]]
+  ['wordnet_0',['wordNet',['../class_controller_1_1_controller.html#a0caef8eaea886ed39a338ccdeccd71c2',1,'Controller::Controller']]],
+  ['wordset_1',['wordSet',['../class_controller_1_1_controller.html#ad44ef082adb51a06959354946bb85a25',1,'Controller::Controller']]]
 ];
