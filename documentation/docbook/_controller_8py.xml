@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__controller_8py" xml:lang="en-US">
+<title>C:/Users/unumuser/OneDrive - Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/Controller.py File Reference</title>
+<indexterm><primary>C:/Users/unumuser/OneDrive - Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/Controller.py</primary></indexterm>
+<para>
+
+<para>Defines the <link linkend="_namespace_controller">Controller</link> class. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_controller_1_1_controller">Controller.Controller</link></para>
+
+<para>The <link linkend="_class_controller_1_1_controller">Controller</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_controller">Controller</link></para>
+
+<para>Defines the <link linkend="_namespace_controller">Controller</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_namespace_controller_1a4a852543a5f6a45daeba4cc0a6e89b92">Controller.DATADIRECTORY</link> = &quot;data/&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespace_controller_1a90acebe83abcb207caabddd5c57ec933">Controller.MODELNAME</link> = &quot;distilroberta-base&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespace_controller_1a78fbfe0377be4cc5daaf3537ff9420bd">Controller.MODELLOCATION</link> = DATADIRECTORY + MODELNAME + &quot;/&quot; + MODELNAME + &quot;Model&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespace_controller_1aa9293e0ab92c7316e2f62dd2285a4378">Controller.TOKENIZERLOCATION</link> = DATADIRECTORY + MODELNAME + &quot;/&quot; + MODELNAME + &quot;Tokenizer&quot;</para>
+</listitem>
+            <listitem><para>string <link linkend="_namespace_controller_1a3773961c95a7982c623341e865b7da72">Controller.PIPELINETYPE</link> = &quot;fill-mask&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Defines the <link linkend="_namespace_controller">Controller</link> class. </para>
+<section xml:id="__controller_8py_1description_Controller">
+<title>Description</title>
+
+<para>Defines the main functionality of the spell checker.</para>
+</section>
+<section xml:id="__controller_8py_1libraries_Controller">
+<title>Libraries/Modules</title>
+
+<para><itemizedlist>
+<listitem>
+<para>json library (<link xlink:href="https://docs.python.org/3/library/json.html">https://docs.python.org/3/library/json.html</link>)</para>
+</listitem><listitem>
+<para>regex library (<link xlink:href="https://docs.python.org/3/library/regex.html">https://docs.python.org/3/library/regex.html</link>)</para>
+</listitem><listitem>
+<para>os library (<link xlink:href="https://docs.python.org/3/library/os.html">https://docs.python.org/3/library/os.html</link>)</para>
+</listitem><listitem>
+<para>sys library (<link xlink:href="https://docs.python.org/3/library/sys.html">https://docs.python.org/3/library/sys.html</link>)</para>
+</listitem><listitem>
+<para>time library (<link xlink:href="https://docs.python.org/3/library/time.html">https://docs.python.org/3/library/time.html</link>)</para>
+</listitem><listitem>
+<para>difflib library (<link xlink:href="https://docs.python.org/3/library/difflib.html">https://docs.python.org/3/library/difflib.html</link>)</para>
+</listitem><listitem>
+<para>transformers library (<link xlink:href="https://huggingface.co/docs/transformers/index">https://huggingface.co/docs/transformers/index</link>)</para>
+</listitem><listitem>
+<para>nltk library (<link xlink:href="https://www.nltk.org/">https://www.nltk.org/</link>)<itemizedlist>
+<listitem>
+<para>Access to various corpora and functions for natural language processing.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>levenshtein library (<link xlink:href="https://pypi.org/project/levenshtein/">https://pypi.org/project/levenshtein/</link>)<itemizedlist>
+<listitem>
+<para>Access to leven function.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>joblib library (<link xlink:href="https://joblib.readthedocs.io/en/latest/">https://joblib.readthedocs.io/en/latest/</link>)<itemizedlist>
+<listitem>
+<para>Access to model saving and loading functions.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem>
+<para>regex library (<link xlink:href="https://docs.python.org/3/library/regex.html">https://docs.python.org/3/library/regex.html</link>)</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="__controller_8py_1notes_Controller">
+<title>Notes</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Comments are Doxygen compatible.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="__controller_8py_1todo_Controller">
+<title>TODO</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Implement proper recognising of a context error without relying on indicators i.e. &quot;[]&quot;.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="__controller_8py_1author_Controller">
+<title>Author(s)</title>
+
+<para><itemizedlist>
+<listitem>
+<para>Created by Pierce Bennett on 26/09/2021.</para>
+</listitem><listitem>
+<para>Modified by Pierce Bennett on 25/04/2022. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+<para>
+Definition in file <link linkend="__controller_8py_source">Controller.py</link>.</para>
+</section>
+</section>

@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceapp" xml:lang="en-US">
+<title>app Namespace Reference</title>
+<indexterm><primary>app</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">displayHomepage</link> ()</para>
+
+<para>Serves the initial homepage of the application. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">displayResults</link> ()</para>
+
+<para>Requests results from the model and updates the page. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">shutdown</link> ()</para>
+
+<para>Shutsdown the server. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">displayDocumentation</link> ()</para>
+
+<para>Serves the Documentation for the program. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceapp_1a675b4ea702c13dc4b8c05f985a25b496">app</link> = Flask(__name__)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1ab97b4dc4c1d36802b081c79135c567ca">controller</link> = <link linkend="_class_controller_1_1_controller">Controller.Controller</link>()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1a7fa7c11c7474c128736b1d34b15a0d5e">host</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1ae996542be63ac459a38531f7c2dd0a49">port</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceapp_1affabdd882d8c940cefb64ced31021c66"/><section>
+    <title>displayDocumentation()</title>
+<indexterm><primary>displayDocumentation</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>displayDocumentation</secondary></indexterm>
+<para><computeroutput>def app.displayDocumentation ( )</computeroutput></para><para>
+
+<para>Serves the Documentation for the program. </para>
+</para>
+<para>
+Definition at line <link linkend="_app_8py_source_1l00047">47</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+<programlisting linenumbering="unnumbered">00047 <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">displayDocumentation</link>():
+00048 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Serves&#32;the&#32;Documentation&#32;for&#32;the&#32;program.&quot;&quot;&quot;</emphasis>
+00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;/documentation/html/index.html&quot;</emphasis>)
+00050 
+00051 
+00052 app.secret_key&#32;=&#32;<emphasis role="stringliteral">&quot;123456789qwertyuiopasdfghjklzxcvbnm&quot;</emphasis>
+00053 
+</programlisting></section>
+<anchor xml:id="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e"/><section>
+    <title>displayHomepage()</title>
+<indexterm><primary>displayHomepage</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>displayHomepage</secondary></indexterm>
+<para><computeroutput>def app.displayHomepage ( )</computeroutput></para><para>
+
+<para>Serves the initial homepage of the application. </para>
+</para>
+<para>
+Definition at line <link linkend="_app_8py_source_1l00011">11</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+<programlisting linenumbering="unnumbered">00011 <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">displayHomepage</link>():
+00012 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Serves&#32;the&#32;initial&#32;homepage&#32;of&#32;the&#32;application.&quot;&quot;&quot;</emphasis>
+00013 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;SpellChecker&quot;</emphasis>)
+00014 
+00015 
+00016 <emphasis role="preprocessor">@app.route(&quot;/&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
+00017 <emphasis role="preprocessor">@app.route(&quot;/index&quot;,&#32;methods=[&quot;POST&quot;])</emphasis>
+</programlisting></section>
+<anchor xml:id="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007"/><section>
+    <title>displayResults()</title>
+<indexterm><primary>displayResults</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>displayResults</secondary></indexterm>
+<para><computeroutput>def app.displayResults ( )</computeroutput></para><para>
+
+<para>Requests results from the model and updates the page. </para>
+</para>
+<para>
+Definition at line <link linkend="_app_8py_source_1l00018">18</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+<programlisting linenumbering="unnumbered">00018 <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">displayResults</link>():
+00019 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Requests&#32;results&#32;from&#32;the&#32;model&#32;and&#32;updates&#32;the&#32;page&quot;&quot;&quot;</emphasis>
+00020 &#32;&#32;&#32;&#32;session[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]&#32;=&#32;inputText&#32;=&#32;request.form[<emphasis role="stringliteral">&quot;inputText&quot;</emphasis>]
+00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;controller.containsError(inputText):
+00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matches&#32;=&#32;controller.processInput(inputText)
+00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;best&#32;=&#32;matches[:1]
+00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;word&#32;=&#32;next(iter(next(iter(best))))
+00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(
+00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;results.html&quot;</emphasis>,
+00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;title=<emphasis role="stringliteral">&quot;Here&#32;are&#32;your&#32;results&quot;</emphasis>,
+00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data=matches,
+00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sentence=inputText,
+00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;top=word,
+00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+00032 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;render_template(<emphasis role="stringliteral">&quot;index.html&quot;</emphasis>,&#32;title=<emphasis role="stringliteral">&quot;Please&#32;enter&#32;a&#32;valid&#32;input&quot;</emphasis>)
+00034 
+00035 
+00036 <emphasis role="preprocessor">@app.route(&quot;/shutdown&quot;,&#32;methods=[&quot;GET&quot;])</emphasis>
+</programlisting></section>
+<anchor xml:id="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12"/><section>
+    <title>shutdown()</title>
+<indexterm><primary>shutdown</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>shutdown</secondary></indexterm>
+<para><computeroutput>def app.shutdown ( )</computeroutput></para><para>
+
+<para>Shutsdown the server. </para>
+</para>
+<para>
+Definition at line <link linkend="_app_8py_source_1l00037">37</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+<programlisting linenumbering="unnumbered">00037 <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">shutdown</link>():
+00038 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;!&#32;Shutsdown&#32;the&#32;server&quot;&quot;&quot;</emphasis>
+00039 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;shutdown_func&#32;=&#32;request.environ.get(&quot;werkzeug.server.shutdown&quot;</emphasis>)
+00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;shutdown_func&#32;<emphasis role="keywordflow">is</emphasis>&#32;<emphasis role="keywordtype">None</emphasis>:
+00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">raise</emphasis>&#32;RuntimeError(<emphasis role="stringliteral">&quot;Not&#32;running&#32;werkzeug&quot;</emphasis>)
+00042 &#32;&#32;&#32;&#32;shutdown_func()
+00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Shutting&#32;down...&quot;</emphasis>
+00044 
+00045 
+00046 <emphasis role="preprocessor">@app.route(&quot;/documentation&quot;)</emphasis>
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceapp_1a675b4ea702c13dc4b8c05f985a25b496"/><section>
+    <title>app</title>
+<indexterm><primary>app</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>app</secondary></indexterm>
+<para><computeroutput>app.app = Flask(__name__)</computeroutput></para><para>
+Definition at line <link linkend="_app_8py_source_1l00005">5</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceapp_1ab97b4dc4c1d36802b081c79135c567ca"/><section>
+    <title>controller</title>
+<indexterm><primary>controller</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>controller</secondary></indexterm>
+<para><computeroutput>app.controller = <link linkend="_class_controller_1_1_controller">Controller.Controller</link>()</computeroutput></para><para>
+Definition at line <link linkend="_app_8py_source_1l00006">6</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceapp_1a7fa7c11c7474c128736b1d34b15a0d5e"/><section>
+    <title>host</title>
+<indexterm><primary>host</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>host</secondary></indexterm>
+<para><computeroutput>app.host</computeroutput></para><para>
+Definition at line <link linkend="_app_8py_source_1l00055">55</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceapp_1ae996542be63ac459a38531f7c2dd0a49"/><section>
+    <title>port</title>
+<indexterm><primary>port</primary><secondary>app</secondary></indexterm>
+<indexterm><primary>app</primary><secondary>port</secondary></indexterm>
+<para><computeroutput>app.port</computeroutput></para><para>
+Definition at line <link linkend="_app_8py_source_1l00055">55</link> of file <link linkend="_app_8py_source">app.py</link>.</para>
+</section>
+</section>
+</section>
