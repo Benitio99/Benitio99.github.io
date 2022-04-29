@@ -1,0 +1,1001 @@
+\hypertarget{class_controller_1_1_controller}{}\doxysection{Controller.\+Controller Class Reference}
+\label{class_controller_1_1_controller}\index{Controller.Controller@{Controller.Controller}}
+
+
+The \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_ae584317363efa29ace5c4294ff9675a2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class initializer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_ad7ae95554134cd1f338934446ba5cb2f}{add\+Mask}} (self, input)
+\begin{DoxyCompactList}\small\item\em Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_aaca6af6776f1c22c159a8427de18d4e6}{contains\+Error}} (self, input)
+\begin{DoxyCompactList}\small\item\em Returns True if the user given input has \mbox{[}$\ast$\mbox{]} contained within the input. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_adb9e3b63ca788d395976a8e490b39b46}{create\+Pipeline}} (self)
+\begin{DoxyCompactList}\small\item\em Creates a transformer pipeline for the model. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a6a13327da753028156eec821f1852dc8}{cross\+Check}} (self, input)
+\begin{DoxyCompactList}\small\item\em Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_afea363d31beb9f56ab6ba7cbe9318938}{extract\+Word}} (self, input)
+\begin{DoxyCompactList}\small\item\em Returns only the contents of \mbox{[}$\ast$\mbox{]} contained within the input given by the user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_af46f7f314af5aef8d5d35e388232dfc6}{extract\+Pre\+And\+Post}} (self, input)
+\begin{DoxyCompactList}\small\item\em Returns the word before the error and the next word after the error. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a179aa818497a96016997c95b44ed1d3d}{fit\+Data}} (self, input)
+\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a786551a4b53767e916ac06c06a4c20ed}{get\+Edit\+Distance}} (self, original\+Word, string\+Compared)
+\begin{DoxyCompactList}\small\item\em Returns the edit distance between the original word and the string compared. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_aa59e5b734bcbd927d121f8928a52ede7}{get\+Edit\+Distance\+List}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a list of the all potential words with the edit distances between the potential word and the original error. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a44ec9d1e8a24e62eea33bc10a562c459}{get\+Error}} (self, input)
+\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a6cd1bb1533b44039e67913d2b54a01a6}{get\+Model\+Predictions}} (self, input)
+\begin{DoxyCompactList}\small\item\em Returns a list of the models predictions based on the input given by the user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a6d7024660385fa85ea0f5dd1a8cf715b}{get\+Similar\+Words}} (self, input)
+\begin{DoxyCompactList}\small\item\em Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_ab8ae7bb8f2e1e7f06a3f08bc0632050b}{get\+Synsets}} (self, guessed\+Words)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the model for use by the program from hugginface.\+com. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_af3e9d79eac0b7cdb8f91ce5962f9d4ca}{load\+Dictionary}} (self)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the dictionary for use by the program based on the nltk corpus. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a22d89b586f67574be91e5932f74a56d6}{load\+Base\+Model}} (self)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the model for use by the program from hugginface.\+com. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a01287a6cf026161bdcf462908477d349}{load\+Base\+Tokenizer}} (self)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the tokenizer for use by the program from hugginface.\+com. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_af53e655391e6d2b325b1c2c6c5ee545c}{load\+Model}} (self, path)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the prepared model for use by the program. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a2a06f91cbec4e350b8662b3047022248}{load\+Tokenizer}} (self, path)
+\begin{DoxyCompactList}\small\item\em Loads and Returns the prepared tokenizer that corresponds to the the model for use by the program. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a3e7e76ff118b519ace9caa49d5885b71}{process\+Input}} (self, str input)
+\begin{DoxyCompactList}\small\item\em Main functionality of the program that processes the input given by the user. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_a5dfc2051795ea4ec97417ba222f57697}{short\+Get\+Edit\+Distance}} (self, original\+Word, string\+Compared)
+\begin{DoxyCompactList}\small\item\em Gets the edit distance required to change strign\+Compared into original Word using the levenshtein method. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_abcb06d1dc6adaa1b7cb78a6e3db227df}{show}} (self)
+\begin{DoxyCompactList}\small\item\em prints all main data members of the class \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_controller_1_1_controller_af44c825436585bbcd07455352e9dc8e7}{sort\+Edit\+Distances}} (self)
+\begin{DoxyCompactList}\small\item\em sorts the list of lists by the edit distance in ascending order \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a1d3f20ab2dc1d682812c04fbbdde0ea2}{context\+Error}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a0caef8eaea886ed39a338ccdeccd71c2}{word\+Net}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a147f1744acd980948a67709747fc382b}{model}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a6e91e1c22bc68f6ce15aa145a8c6be41}{tokenizer}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_ac30a8a8c8a3b21f7a93142f75118f4a6}{pipeline}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a56ca938edde13ee70e9a2eae0b0d239a}{model\+Results}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_aeffc254b8725ff40b46c077df12884f3}{model\+Guess\+Synset}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a2b8eabdd4ea1ac9f31368b64f72d12f4}{edit\+Distances}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a39a8f0ae9a5502e9b5f68b010b5e34c3}{predicted\+Values}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_ab7e30b0aab77c733ec3f88425d175954}{dictionary}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a54fc49953ce72a0cbec230685dd55db3}{similar\+Words}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a30a4bb3c6517f2ff765d5b2758675bdb}{pre\+Word}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_acf95ddb8d11ce86b2a022c3e2406efaa}{post\+Word}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_ad44ef082adb51a06959354946bb85a25}{word\+Set}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a664d2bba1b9baee6672e0e233bffb8aa}{masked\+Input}}
+\item 
+\mbox{\hyperlink{class_controller_1_1_controller_a35f6a1e97c4d9f52549ad22b723ac427}{model\+Results\+Synset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class. 
+
+Defines the \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class that contains the main functionality of the spell checker. 
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00064}{64}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controller_1_1_controller_ae584317363efa29ace5c4294ff9675a2}\label{class_controller_1_1_controller_ae584317363efa29ace5c4294ff9675a2}} 
+\index{Controller.Controller@{Controller.Controller}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class initializer. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00069}{69}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069     \textcolor{keyword}{def }\_\_init\_\_(self):}
+\DoxyCodeLine{00070         \textcolor{stringliteral}{"{}"{}"{}! The Controller class initializer."{}"{}"{}}}
+\DoxyCodeLine{00071         self.contextError = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00072         self.wordNet = wordnet}
+\DoxyCodeLine{00073         self.model = self.loadModel(MODELLOCATION)}
+\DoxyCodeLine{00074         self.tokenizer = self.loadTokenizer(TOKENIZERLOCATION)}
+\DoxyCodeLine{00075         self.pipeline = self.createPipeline()}
+\DoxyCodeLine{00076         self.modelResults = []}
+\DoxyCodeLine{00077         self.modelGuessSynset = []}
+\DoxyCodeLine{00078         self.editDistances = []}
+\DoxyCodeLine{00079         self.predictedValues = []}
+\DoxyCodeLine{00080         self.dictionary = self.loadDictionary()}
+\DoxyCodeLine{00081         self.similarWords = []}
+\DoxyCodeLine{00082         self.preWord = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00083         self.postWord = \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00084         self.wordSet = set()}
+\DoxyCodeLine{00085         nltk.download(\textcolor{stringliteral}{"{}wordnet"{}})}
+\DoxyCodeLine{00086 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_1_1_controller_ad7ae95554134cd1f338934446ba5cb2f}\label{class_controller_1_1_controller_ad7ae95554134cd1f338934446ba5cb2f}} 
+\index{Controller.Controller@{Controller.Controller}!addMask@{addMask}}
+\index{addMask@{addMask}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{addMask()}{addMask()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+add\+Mask (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00087}{87}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087     \textcolor{keyword}{def }addMask(self, input):}
+\DoxyCodeLine{00088         \textcolor{stringliteral}{"{}"{}"{}! Replaces the [*] contained input with a mask from the tokeniser.}}
+\DoxyCodeLine{00089 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00090         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00091 \textcolor{stringliteral}{        mask = self.tokenizer.mask\_token}}
+\DoxyCodeLine{00092 \textcolor{stringliteral}{        input = regex.sub("{}[[A-\/Za-\/z]+]"{}}, mask, input)}
+\DoxyCodeLine{00093         \textcolor{keywordflow}{return} input}
+\DoxyCodeLine{00094 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_aaca6af6776f1c22c159a8427de18d4e6}\label{class_controller_1_1_controller_aaca6af6776f1c22c159a8427de18d4e6}} 
+\index{Controller.Controller@{Controller.Controller}!containsError@{containsError}}
+\index{containsError@{containsError}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{containsError()}{containsError()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+contains\+Error (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns True if the user given input has \mbox{[}$\ast$\mbox{]} contained within the input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00095}{95}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095     \textcolor{keyword}{def }containsError(self, input):}
+\DoxyCodeLine{00096         \textcolor{stringliteral}{"{}"{}"{}! Returns True if the user given input has [*] contained within the input.}}
+\DoxyCodeLine{00097 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00098         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00099 \textcolor{stringliteral}{        pattern = "{}[[A-\/Za-\/z]+]"{}}}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{if} regex.search(pattern, input):}
+\DoxyCodeLine{00101             \textcolor{keywordflow}{return} \textcolor{keyword}{True}}
+\DoxyCodeLine{00102         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{return} \textcolor{keyword}{False}}
+\DoxyCodeLine{00104 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_adb9e3b63ca788d395976a8e490b39b46}\label{class_controller_1_1_controller_adb9e3b63ca788d395976a8e490b39b46}} 
+\index{Controller.Controller@{Controller.Controller}!createPipeline@{createPipeline}}
+\index{createPipeline@{createPipeline}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{createPipeline()}{createPipeline()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+create\+Pipeline (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Creates a transformer pipeline for the model. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00105}{105}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105     \textcolor{keyword}{def }createPipeline(self):}
+\DoxyCodeLine{00106         \textcolor{stringliteral}{"{}"{}"{}! Creates a transformer pipeline for the model."{}"{}"{}}}
+\DoxyCodeLine{00107         pipeline = transformers.pipeline(}
+\DoxyCodeLine{00108             PIPELINETYPE, model=self.model, tokenizer=self.tokenizer}
+\DoxyCodeLine{00109         )}
+\DoxyCodeLine{00110         \textcolor{keywordflow}{return} pipeline}
+\DoxyCodeLine{00111 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a6a13327da753028156eec821f1852dc8}\label{class_controller_1_1_controller_a6a13327da753028156eec821f1852dc8}} 
+\index{Controller.Controller@{Controller.Controller}!crossCheck@{crossCheck}}
+\index{crossCheck@{crossCheck}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{crossCheck()}{crossCheck()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+cross\+Check (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00112}{112}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112     \textcolor{keyword}{def }crossCheck(self, input):}
+\DoxyCodeLine{00113         \textcolor{stringliteral}{"{}"{}"{}! Replaces the [*] contained input with a mask from the tokeniser.}}
+\DoxyCodeLine{00114 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input The complete input given by the user}
+\DoxyCodeLine{00115         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00116 \textcolor{stringliteral}{        similarWords = difflib.get\_close\_matches(input, self.dictionary)}}
+\DoxyCodeLine{00117 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} similarWords}
+\DoxyCodeLine{00118 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_af46f7f314af5aef8d5d35e388232dfc6}\label{class_controller_1_1_controller_af46f7f314af5aef8d5d35e388232dfc6}} 
+\index{Controller.Controller@{Controller.Controller}!extractPreAndPost@{extractPreAndPost}}
+\index{extractPreAndPost@{extractPreAndPost}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{extractPreAndPost()}{extractPreAndPost()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+extract\+Pre\+And\+Post (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns the word before the error and the next word after the error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00125}{125}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125     \textcolor{keyword}{def }extractPreAndPost(self, input):}
+\DoxyCodeLine{00126         \textcolor{stringliteral}{"{}"{}"{}! Returns the word before the error and the next word after the error.}}
+\DoxyCodeLine{00127 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00128         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00129 \textcolor{stringliteral}{        beforeAndAfter = input.split("{}["{}} + str(self.contextError) + \textcolor{stringliteral}{"{}]"{}})}
+\DoxyCodeLine{00130         before = beforeAndAfter[0]}
+\DoxyCodeLine{00131         after = beforeAndAfter[1]}
+\DoxyCodeLine{00132         pre, post = \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}}}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} len(before) > 2:}
+\DoxyCodeLine{00134             pre = before.split(\textcolor{stringliteral}{"{} "{}})[-\/2]}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{if} pre[:-\/1] == \textcolor{stringliteral}{"{},"{}}:}
+\DoxyCodeLine{00136                 post = post[:-\/1]}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if} len(after) > 2:}
+\DoxyCodeLine{00138             post = after.split(\textcolor{stringliteral}{"{} "{}})[1]}
+\DoxyCodeLine{00139             \textcolor{keywordflow}{for} char \textcolor{keywordflow}{in} post:}
+\DoxyCodeLine{00140                 \textcolor{keywordflow}{if} char \textcolor{keywordflow}{in} \textcolor{stringliteral}{"{}?.!/;:"{}}:}
+\DoxyCodeLine{00141                     post = post.replace(char, \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00142         \textcolor{keywordflow}{return} pre, post}
+\DoxyCodeLine{00143 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_afea363d31beb9f56ab6ba7cbe9318938}\label{class_controller_1_1_controller_afea363d31beb9f56ab6ba7cbe9318938}} 
+\index{Controller.Controller@{Controller.Controller}!extractWord@{extractWord}}
+\index{extractWord@{extractWord}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{extractWord()}{extractWord()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+extract\+Word (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns only the contents of \mbox{[}$\ast$\mbox{]} contained within the input given by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00119}{119}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119     \textcolor{keyword}{def }extractWord(self, input):}
+\DoxyCodeLine{00120         \textcolor{stringliteral}{"{}"{}"{}! Returns only the contents of [*] contained within the input given by the user.}}
+\DoxyCodeLine{00121 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00122         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00123 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} input[input.find(\textcolor{stringliteral}{"{}["{}}) + 1 : input.find(\textcolor{stringliteral}{"{}]"{}})]}
+\DoxyCodeLine{00124 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a179aa818497a96016997c95b44ed1d3d}\label{class_controller_1_1_controller_a179aa818497a96016997c95b44ed1d3d}} 
+\index{Controller.Controller@{Controller.Controller}!fitData@{fitData}}
+\index{fitData@{fitData}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{fitData()}{fitData()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+fit\+Data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00144}{144}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144     \textcolor{keyword}{def }fitData(self, input):}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00146 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a786551a4b53767e916ac06c06a4c20ed}\label{class_controller_1_1_controller_a786551a4b53767e916ac06c06a4c20ed}} 
+\index{Controller.Controller@{Controller.Controller}!getEditDistance@{getEditDistance}}
+\index{getEditDistance@{getEditDistance}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getEditDistance()}{getEditDistance()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Edit\+Distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{original\+Word,  }\item[{}]{string\+Compared }\end{DoxyParamCaption})}
+
+
+
+Returns the edit distance between the original word and the string compared. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Word} & The original word given by the user \\
+\hline
+{\em string\+Compared} & The string to be compared to the original word \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00147}{147}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147     \textcolor{keyword}{def }getEditDistance(self, originalWord, stringCompared):}
+\DoxyCodeLine{00148         \textcolor{stringliteral}{"{}"{}"{}! Returns the edit distance between the original word and the string compared.}}
+\DoxyCodeLine{00149 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} originalWord  The original word given by the user}
+\DoxyCodeLine{00150         \textcolor{preprocessor}{@param} stringCompared  The string to be compared to the original word}
+\DoxyCodeLine{00151         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00152 \textcolor{stringliteral}{        }\textcolor{keywordflow}{if} len(originalWord) < len(stringCompared):}
+\DoxyCodeLine{00153             \textcolor{keywordflow}{return} self.getEditDistance(stringCompared, originalWord)}
+\DoxyCodeLine{00154         \textcolor{comment}{\# When the originalWord is longer than the word to be compared with}}
+\DoxyCodeLine{00155         \textcolor{keywordflow}{if} len(stringCompared) == 0:}
+\DoxyCodeLine{00156             \textcolor{keywordflow}{return} len(originalWord)}
+\DoxyCodeLine{00157         previousRow = range(len(stringCompared) + 1)}
+\DoxyCodeLine{00158         \textcolor{keywordflow}{for} originalWordindex, charOne \textcolor{keywordflow}{in} enumerate(originalWord):}
+\DoxyCodeLine{00159             currentRow = [originalWordindex + 1]}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{for} comparedWordIndex, charTwo \textcolor{keywordflow}{in} enumerate(stringCompared):}
+\DoxyCodeLine{00161                 insertions = previous\_row[comparedWordIndex + 1] + 1}
+\DoxyCodeLine{00162                 deletions = currentRow[comparedWordIndex] + 1}
+\DoxyCodeLine{00163                 substitutions = previous\_row[comparedWordIndex] + (charOne != charTwo)}
+\DoxyCodeLine{00164                 currentRow.append(min(insertions, deletions, substitutions))}
+\DoxyCodeLine{00165             previous\_row = currentRow}
+\DoxyCodeLine{00166         \textcolor{keywordflow}{return} previous\_row[-\/1]}
+\DoxyCodeLine{00167 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_aa59e5b734bcbd927d121f8928a52ede7}\label{class_controller_1_1_controller_aa59e5b734bcbd927d121f8928a52ede7}} 
+\index{Controller.Controller@{Controller.Controller}!getEditDistanceList@{getEditDistanceList}}
+\index{getEditDistanceList@{getEditDistanceList}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getEditDistanceList()}{getEditDistanceList()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Edit\+Distance\+List (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a list of the all potential words with the edit distances between the potential word and the original error. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00168}{168}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168     \textcolor{keyword}{def }getEditDistanceList(self):}
+\DoxyCodeLine{00169         \textcolor{stringliteral}{"{}"{}"{}! Returns a list of the all potential words with the edit distances between the potential word and the original error."{}"{}"{}}}
+\DoxyCodeLine{00170         synsetList = self.modelResultsSynset}
+\DoxyCodeLine{00171         originalWord = self.contextError}
+\DoxyCodeLine{00172         editDistances = []}
+\DoxyCodeLine{00173         \textcolor{keywordflow}{for} word \textcolor{keywordflow}{in} synsetList:}
+\DoxyCodeLine{00174             distance = self.shortGetEditDistance(originalWord, word)}
+\DoxyCodeLine{00175             editDistances.append(distance)}
+\DoxyCodeLine{00176         combinedList = list(zip(synsetList, editDistances))}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{return} combinedList}
+\DoxyCodeLine{00178 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a44ec9d1e8a24e62eea33bc10a562c459}\label{class_controller_1_1_controller_a44ec9d1e8a24e62eea33bc10a562c459}} 
+\index{Controller.Controller@{Controller.Controller}!getError@{getError}}
+\index{getError@{getError}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getError()}{getError()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Error (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00179}{179}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179     \textcolor{keyword}{def }getError(self, input):}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00181 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a6cd1bb1533b44039e67913d2b54a01a6}\label{class_controller_1_1_controller_a6cd1bb1533b44039e67913d2b54a01a6}} 
+\index{Controller.Controller@{Controller.Controller}!getModelPredictions@{getModelPredictions}}
+\index{getModelPredictions@{getModelPredictions}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getModelPredictions()}{getModelPredictions()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Model\+Predictions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Returns a list of the models predictions based on the input given by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00182}{182}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00182     \textcolor{keyword}{def }getModelPredictions(self, input):}
+\DoxyCodeLine{00183         \textcolor{stringliteral}{"{}"{}"{}! Returns a list of the models predictions based on the input given by the user.}}
+\DoxyCodeLine{00184 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00185         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00186 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} self.pipeline(input)}
+\DoxyCodeLine{00187 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a6d7024660385fa85ea0f5dd1a8cf715b}\label{class_controller_1_1_controller_a6d7024660385fa85ea0f5dd1a8cf715b}} 
+\index{Controller.Controller@{Controller.Controller}!getSimilarWords@{getSimilarWords}}
+\index{getSimilarWords@{getSimilarWords}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getSimilarWords()}{getSimilarWords()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Similar\+Words (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{input }\end{DoxyParamCaption})}
+
+
+
+Replaces the \mbox{[}$\ast$\mbox{]} contained input with a mask from the tokeniser. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00188}{188}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00188     \textcolor{keyword}{def }getSimilarWords(self, input):}
+\DoxyCodeLine{00189         \textcolor{stringliteral}{"{}"{}"{}! Replaces the [*] contained input with a mask from the tokeniser.}}
+\DoxyCodeLine{00190 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00191         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00192 \textcolor{stringliteral}{        similarWords = set()}}
+\DoxyCodeLine{00193 \textcolor{stringliteral}{        similarWords = difflib.get\_close\_matches(input, self.dictionary)}}
+\DoxyCodeLine{00194 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} similarWords}
+\DoxyCodeLine{00195 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_ab8ae7bb8f2e1e7f06a3f08bc0632050b}\label{class_controller_1_1_controller_ab8ae7bb8f2e1e7f06a3f08bc0632050b}} 
+\index{Controller.Controller@{Controller.Controller}!getSynsets@{getSynsets}}
+\index{getSynsets@{getSynsets}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getSynsets()}{getSynsets()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+get\+Synsets (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{guessed\+Words }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the model for use by the program from hugginface.\+com. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guessed\+Words} & A list of potential Guesses \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00196}{196}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00196     \textcolor{keyword}{def }getSynsets(self, guessedWords):}
+\DoxyCodeLine{00197         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the model for use by the program from hugginface.com.}}
+\DoxyCodeLine{00198 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} guessedWords A list of potential Guesses}
+\DoxyCodeLine{00199         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00200 \textcolor{stringliteral}{        guesses = set()}}
+\DoxyCodeLine{00201 \textcolor{stringliteral}{        wordList = set()}}
+\DoxyCodeLine{00202 \textcolor{stringliteral}{        }\textcolor{keywordflow}{for} guess \textcolor{keywordflow}{in} guessedWords:}
+\DoxyCodeLine{00203             guesses.add(guess)}
+\DoxyCodeLine{00204         \textcolor{keywordflow}{for} guess \textcolor{keywordflow}{in} guesses:}
+\DoxyCodeLine{00205             wordList.add(guess)}
+\DoxyCodeLine{00206             synsets = self.wordNet.synsets(guess)}
+\DoxyCodeLine{00207             \textcolor{keywordflow}{for} synset \textcolor{keywordflow}{in} synsets:}
+\DoxyCodeLine{00208                 \textcolor{keywordflow}{for} lemma \textcolor{keywordflow}{in} synset.lemmas():}
+\DoxyCodeLine{00209                     print(str(lemma.name()) + \textcolor{stringliteral}{"{}, "{}}, end=\textcolor{stringliteral}{"{} "{}})}
+\DoxyCodeLine{00210                     wordList.add(lemma.name().strip().replace(\textcolor{stringliteral}{"{}\_"{}}, \textcolor{stringliteral}{"{} "{}}).lower())}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{return} wordList}
+\DoxyCodeLine{00212 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a22d89b586f67574be91e5932f74a56d6}\label{class_controller_1_1_controller_a22d89b586f67574be91e5932f74a56d6}} 
+\index{Controller.Controller@{Controller.Controller}!loadBaseModel@{loadBaseModel}}
+\index{loadBaseModel@{loadBaseModel}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{loadBaseModel()}{loadBaseModel()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+load\+Base\+Model (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the model for use by the program from hugginface.\+com. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00218}{218}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218     \textcolor{keyword}{def }loadBaseModel(self):}
+\DoxyCodeLine{00219         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the model for use by the program from hugginface.com."{}"{}"{}}}
+\DoxyCodeLine{00220         model = AutoModelForMaskedLM.from\_pretrained(MODELNAME)}
+\DoxyCodeLine{00221         \textcolor{keywordflow}{return} model}
+\DoxyCodeLine{00222 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a01287a6cf026161bdcf462908477d349}\label{class_controller_1_1_controller_a01287a6cf026161bdcf462908477d349}} 
+\index{Controller.Controller@{Controller.Controller}!loadBaseTokenizer@{loadBaseTokenizer}}
+\index{loadBaseTokenizer@{loadBaseTokenizer}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{loadBaseTokenizer()}{loadBaseTokenizer()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+load\+Base\+Tokenizer (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the tokenizer for use by the program from hugginface.\+com. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00223}{223}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00223     \textcolor{keyword}{def }loadBaseTokenizer(self):}
+\DoxyCodeLine{00224         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the tokenizer for use by the program from hugginface.com."{}"{}"{}}}
+\DoxyCodeLine{00225         tokenizer = AutoTokenizer.from\_pretrained(MODELNAME)}
+\DoxyCodeLine{00226         \textcolor{keywordflow}{return} tokenizer}
+\DoxyCodeLine{00227 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_af3e9d79eac0b7cdb8f91ce5962f9d4ca}\label{class_controller_1_1_controller_af3e9d79eac0b7cdb8f91ce5962f9d4ca}} 
+\index{Controller.Controller@{Controller.Controller}!loadDictionary@{loadDictionary}}
+\index{loadDictionary@{loadDictionary}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{loadDictionary()}{loadDictionary()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+load\+Dictionary (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the dictionary for use by the program based on the nltk corpus. 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00213}{213}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00213     \textcolor{keyword}{def }loadDictionary(self):}
+\DoxyCodeLine{00214         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the dictionary for use by the program based on the nltk corpus."{}"{}"{}}}
+\DoxyCodeLine{00215         dictionary = set(w.lower() \textcolor{keywordflow}{for} w \textcolor{keywordflow}{in} nltk.corpus.words.words())}
+\DoxyCodeLine{00216         \textcolor{keywordflow}{return} dictionary}
+\DoxyCodeLine{00217 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_af53e655391e6d2b325b1c2c6c5ee545c}\label{class_controller_1_1_controller_af53e655391e6d2b325b1c2c6c5ee545c}} 
+\index{Controller.Controller@{Controller.Controller}!loadModel@{loadModel}}
+\index{loadModel@{loadModel}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{loadModel()}{loadModel()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+load\+Model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the prepared model for use by the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The directory path of the model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00228}{228}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00228     \textcolor{keyword}{def }loadModel(self, path):}
+\DoxyCodeLine{00229         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the prepared model for use by the program}}
+\DoxyCodeLine{00230 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} path  The directory path of the model}
+\DoxyCodeLine{00231         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00232 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} joblib.load(path)}
+\DoxyCodeLine{00233 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a2a06f91cbec4e350b8662b3047022248}\label{class_controller_1_1_controller_a2a06f91cbec4e350b8662b3047022248}} 
+\index{Controller.Controller@{Controller.Controller}!loadTokenizer@{loadTokenizer}}
+\index{loadTokenizer@{loadTokenizer}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{loadTokenizer()}{loadTokenizer()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+load\+Tokenizer (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads and Returns the prepared tokenizer that corresponds to the the model for use by the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The directory path of the tokenizer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00234}{234}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00234     \textcolor{keyword}{def }loadTokenizer(self, path):}
+\DoxyCodeLine{00235         \textcolor{stringliteral}{"{}"{}"{}! Loads and Returns the prepared tokenizer that corresponds to the the model for use by the program}}
+\DoxyCodeLine{00236 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} path  The directory path of the tokenizer}
+\DoxyCodeLine{00237         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00238 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} joblib.load(path)}
+\DoxyCodeLine{00239 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a3e7e76ff118b519ace9caa49d5885b71}\label{class_controller_1_1_controller_a3e7e76ff118b519ace9caa49d5885b71}} 
+\index{Controller.Controller@{Controller.Controller}!processInput@{processInput}}
+\index{processInput@{processInput}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+process\+Input (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{input }\end{DoxyParamCaption})}
+
+
+
+Main functionality of the program that processes the input given by the user. 
+
+@type input\+: str 
+\begin{DoxyParams}{Parameters}
+{\em input} & The complete input given by the user \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00240}{240}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00240     \textcolor{keyword}{def }processInput(self, input: str):}
+\DoxyCodeLine{00241         \textcolor{stringliteral}{"{}"{}"{}! Main functionality of the program that processes the input given by the user.}}
+\DoxyCodeLine{00242 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@type} input: str}
+\DoxyCodeLine{00243         \textcolor{preprocessor}{@param} input  The complete input given by the user}
+\DoxyCodeLine{00244         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00245 \textcolor{stringliteral}{        }\textcolor{keywordflow}{if} self.containsError(input):}
+\DoxyCodeLine{00246             \textcolor{comment}{\# gets the word that is the error}}
+\DoxyCodeLine{00247             self.contextError = self.extractWord(input)}
+\DoxyCodeLine{00248             \textcolor{comment}{\# get word before the error and after the error}}
+\DoxyCodeLine{00249             self.preWord, self.postWord = self.extractPreAndPost(input)}
+\DoxyCodeLine{00250             \textcolor{comment}{\# replaces the error with an appropriate mask}}
+\DoxyCodeLine{00251             self.maskedInput = self.addMask(input)}
+\DoxyCodeLine{00252             \textcolor{comment}{\# get the model predictions}}
+\DoxyCodeLine{00253             self.modelResults = self.getModelPredictions(self.maskedInput)}
+\DoxyCodeLine{00254             self.modelResultsSynset = []}
+\DoxyCodeLine{00255             \textcolor{comment}{\# for each prediction made:}}
+\DoxyCodeLine{00256             \textcolor{keywordflow}{for} prediction \textcolor{keywordflow}{in} self.modelResults:}
+\DoxyCodeLine{00257                 \textcolor{comment}{\# gets the predicted word}}
+\DoxyCodeLine{00258                 prediction = prediction.get(\textcolor{stringliteral}{"{}token\_str"{}}).strip()}
+\DoxyCodeLine{00259                 \textcolor{comment}{\# creates a list of three words to create two bigrams for comparison}}
+\DoxyCodeLine{00260                 bigramRawInputList = []}
+\DoxyCodeLine{00261                 bigramRawInputList.append(self.preWord)}
+\DoxyCodeLine{00262                 bigramRawInputList.append(prediction)}
+\DoxyCodeLine{00263                 bigramRawInputList.append(self.postWord)}
+\DoxyCodeLine{00264                 bigramList = list(nltk.bigrams(bigramRawInputList))}
+\DoxyCodeLine{00265                 bigramJoinedList = []}
+\DoxyCodeLine{00266                 \textcolor{comment}{\# joins words with a space for each bigram}}
+\DoxyCodeLine{00267                 \textcolor{keywordflow}{for} bigram \textcolor{keywordflow}{in} bigramList:}
+\DoxyCodeLine{00268                     bigram = \textcolor{stringliteral}{"{} "{}}.join(bigram)}
+\DoxyCodeLine{00269                     bigramJoinedList.append(bigram)}
+\DoxyCodeLine{00270                 bigramFinalList = bigramJoinedList[:]}
+\DoxyCodeLine{00271                 bigramFinalList.append(prediction)}
+\DoxyCodeLine{00272                 \textcolor{comment}{\# gets the synsets for each bigram in the list}}
+\DoxyCodeLine{00273                 bigramListResults = self.getSynsets(bigramFinalList)}
+\DoxyCodeLine{00274                 \textcolor{comment}{\# Filter out the bigrams only}}
+\DoxyCodeLine{00275                 \textcolor{keywordflow}{for} word \textcolor{keywordflow}{in} list(bigramListResults):}
+\DoxyCodeLine{00276                     \textcolor{keywordflow}{for} bigram \textcolor{keywordflow}{in} bigramJoinedList:}
+\DoxyCodeLine{00277                         \textcolor{keywordflow}{if} word == bigram:}
+\DoxyCodeLine{00278                             bigramListResults.remove(word)}
+\DoxyCodeLine{00279                 \textcolor{comment}{\# appends the synsets to the full list of synsets}}
+\DoxyCodeLine{00280                 \textcolor{keywordflow}{for} result \textcolor{keywordflow}{in} bigramListResults:}
+\DoxyCodeLine{00281                     self.modelResultsSynset.append(result)}
+\DoxyCodeLine{00282 }
+\DoxyCodeLine{00283             \textcolor{comment}{\# Filter out any duplicates that may be present}}
+\DoxyCodeLine{00284             self.modelResultsSynset = list(set(self.modelResultsSynset))}
+\DoxyCodeLine{00285             \textcolor{comment}{\# returns a set of lists that adds the edit distance to each word in the set}}
+\DoxyCodeLine{00286             self.editDistances = self.getEditDistanceList()}
+\DoxyCodeLine{00287             \textcolor{comment}{\# sorts the list according to the edit distance in ascending order}}
+\DoxyCodeLine{00288             self.sortEditDistances()}
+\DoxyCodeLine{00289             \textcolor{comment}{\# Return the top 10 results by shortest edit distance compared to the error}}
+\DoxyCodeLine{00290             \textcolor{keywordflow}{return} self.editDistances[:10]}
+\DoxyCodeLine{00291         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{00292             \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{00293 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_a5dfc2051795ea4ec97417ba222f57697}\label{class_controller_1_1_controller_a5dfc2051795ea4ec97417ba222f57697}} 
+\index{Controller.Controller@{Controller.Controller}!shortGetEditDistance@{shortGetEditDistance}}
+\index{shortGetEditDistance@{shortGetEditDistance}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{shortGetEditDistance()}{shortGetEditDistance()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+short\+Get\+Edit\+Distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{original\+Word,  }\item[{}]{string\+Compared }\end{DoxyParamCaption})}
+
+
+
+Gets the edit distance required to change strign\+Compared into original Word using the levenshtein method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Word} & The word to be compared to \\
+\hline
+{\em string\+Compared} & The word to be compared to the original word \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The edit distance between the two words 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00294}{294}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00294     \textcolor{keyword}{def }shortGetEditDistance(self, originalWord, stringCompared):}
+\DoxyCodeLine{00295         \textcolor{stringliteral}{"{}"{}"{}! Gets the edit distance required to change strignCompared into original Word using the levenshtein method}}
+\DoxyCodeLine{00296 \textcolor{stringliteral}{        }\textcolor{preprocessor}{@param} originalWord  The word to be compared to}
+\DoxyCodeLine{00297         \textcolor{preprocessor}{@param} stringCompared  The word to be compared to the original word}
+\DoxyCodeLine{00298         \textcolor{preprocessor}{@return} The edit distance between the two words}
+\DoxyCodeLine{00299         \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{00300 \textcolor{stringliteral}{        originalWord = originalWord.lower()}}
+\DoxyCodeLine{00301 \textcolor{stringliteral}{        stringCompared = stringCompared.lower()}}
+\DoxyCodeLine{00302 \textcolor{stringliteral}{        distance = leven.distance(originalWord, stringCompared)}}
+\DoxyCodeLine{00303 \textcolor{stringliteral}{        }\textcolor{keywordflow}{return} distance}
+\DoxyCodeLine{00304 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_abcb06d1dc6adaa1b7cb78a6e3db227df}\label{class_controller_1_1_controller_abcb06d1dc6adaa1b7cb78a6e3db227df}} 
+\index{Controller.Controller@{Controller.Controller}!show@{show}}
+\index{show@{show}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+show (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+prints all main data members of the class 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00305}{305}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00305     \textcolor{keyword}{def }show(self):}
+\DoxyCodeLine{00306         \textcolor{stringliteral}{"{}"{}"{}! prints all main data members of the class"{}"{}"{}}}
+\DoxyCodeLine{00307         print(self.modelResults)}
+\DoxyCodeLine{00308         print(self.wordNet)}
+\DoxyCodeLine{00309         print(self.modelGuessSynset)}
+\DoxyCodeLine{00310         print(self.editDistances)}
+\DoxyCodeLine{00311         print(self.model)}
+\DoxyCodeLine{00312         print(self.tokenizer)}
+\DoxyCodeLine{00313         print(self.pipeline)}
+\DoxyCodeLine{00314 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_controller_1_1_controller_af44c825436585bbcd07455352e9dc8e7}\label{class_controller_1_1_controller_af44c825436585bbcd07455352e9dc8e7}} 
+\index{Controller.Controller@{Controller.Controller}!sortEditDistances@{sortEditDistances}}
+\index{sortEditDistances@{sortEditDistances}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{sortEditDistances()}{sortEditDistances()}}
+{\footnotesize\ttfamily def Controller.\+Controller.\+sort\+Edit\+Distances (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+sorts the list of lists by the edit distance in ascending order 
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00315}{315}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00315     \textcolor{keyword}{def }sortEditDistances(self):}
+\DoxyCodeLine{00316         \textcolor{stringliteral}{"{}"{}"{}! sorts the list of lists by the edit distance in ascending order"{}"{}"{}}}
+\DoxyCodeLine{00317 \textcolor{stringliteral}{        self.editDistances.sort(key=itemgetter(1))}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controller_1_1_controller_a1d3f20ab2dc1d682812c04fbbdde0ea2}\label{class_controller_1_1_controller_a1d3f20ab2dc1d682812c04fbbdde0ea2}} 
+\index{Controller.Controller@{Controller.Controller}!contextError@{contextError}}
+\index{contextError@{contextError}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{contextError}{contextError}}
+{\footnotesize\ttfamily Controller.\+Controller.\+context\+Error}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00071}{71}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_ab7e30b0aab77c733ec3f88425d175954}\label{class_controller_1_1_controller_ab7e30b0aab77c733ec3f88425d175954}} 
+\index{Controller.Controller@{Controller.Controller}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily Controller.\+Controller.\+dictionary}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00080}{80}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a2b8eabdd4ea1ac9f31368b64f72d12f4}\label{class_controller_1_1_controller_a2b8eabdd4ea1ac9f31368b64f72d12f4}} 
+\index{Controller.Controller@{Controller.Controller}!editDistances@{editDistances}}
+\index{editDistances@{editDistances}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{editDistances}{editDistances}}
+{\footnotesize\ttfamily Controller.\+Controller.\+edit\+Distances}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00078}{78}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a664d2bba1b9baee6672e0e233bffb8aa}\label{class_controller_1_1_controller_a664d2bba1b9baee6672e0e233bffb8aa}} 
+\index{Controller.Controller@{Controller.Controller}!maskedInput@{maskedInput}}
+\index{maskedInput@{maskedInput}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{maskedInput}{maskedInput}}
+{\footnotesize\ttfamily Controller.\+Controller.\+masked\+Input}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00251}{251}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a147f1744acd980948a67709747fc382b}\label{class_controller_1_1_controller_a147f1744acd980948a67709747fc382b}} 
+\index{Controller.Controller@{Controller.Controller}!model@{model}}
+\index{model@{model}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily Controller.\+Controller.\+model}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00073}{73}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_aeffc254b8725ff40b46c077df12884f3}\label{class_controller_1_1_controller_aeffc254b8725ff40b46c077df12884f3}} 
+\index{Controller.Controller@{Controller.Controller}!modelGuessSynset@{modelGuessSynset}}
+\index{modelGuessSynset@{modelGuessSynset}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{modelGuessSynset}{modelGuessSynset}}
+{\footnotesize\ttfamily Controller.\+Controller.\+model\+Guess\+Synset}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00077}{77}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a56ca938edde13ee70e9a2eae0b0d239a}\label{class_controller_1_1_controller_a56ca938edde13ee70e9a2eae0b0d239a}} 
+\index{Controller.Controller@{Controller.Controller}!modelResults@{modelResults}}
+\index{modelResults@{modelResults}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{modelResults}{modelResults}}
+{\footnotesize\ttfamily Controller.\+Controller.\+model\+Results}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00076}{76}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a35f6a1e97c4d9f52549ad22b723ac427}\label{class_controller_1_1_controller_a35f6a1e97c4d9f52549ad22b723ac427}} 
+\index{Controller.Controller@{Controller.Controller}!modelResultsSynset@{modelResultsSynset}}
+\index{modelResultsSynset@{modelResultsSynset}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{modelResultsSynset}{modelResultsSynset}}
+{\footnotesize\ttfamily Controller.\+Controller.\+model\+Results\+Synset}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00254}{254}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_ac30a8a8c8a3b21f7a93142f75118f4a6}\label{class_controller_1_1_controller_ac30a8a8c8a3b21f7a93142f75118f4a6}} 
+\index{Controller.Controller@{Controller.Controller}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{pipeline}{pipeline}}
+{\footnotesize\ttfamily Controller.\+Controller.\+pipeline}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00075}{75}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_acf95ddb8d11ce86b2a022c3e2406efaa}\label{class_controller_1_1_controller_acf95ddb8d11ce86b2a022c3e2406efaa}} 
+\index{Controller.Controller@{Controller.Controller}!postWord@{postWord}}
+\index{postWord@{postWord}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{postWord}{postWord}}
+{\footnotesize\ttfamily Controller.\+Controller.\+post\+Word}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00083}{83}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a39a8f0ae9a5502e9b5f68b010b5e34c3}\label{class_controller_1_1_controller_a39a8f0ae9a5502e9b5f68b010b5e34c3}} 
+\index{Controller.Controller@{Controller.Controller}!predictedValues@{predictedValues}}
+\index{predictedValues@{predictedValues}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{predictedValues}{predictedValues}}
+{\footnotesize\ttfamily Controller.\+Controller.\+predicted\+Values}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00079}{79}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a30a4bb3c6517f2ff765d5b2758675bdb}\label{class_controller_1_1_controller_a30a4bb3c6517f2ff765d5b2758675bdb}} 
+\index{Controller.Controller@{Controller.Controller}!preWord@{preWord}}
+\index{preWord@{preWord}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{preWord}{preWord}}
+{\footnotesize\ttfamily Controller.\+Controller.\+pre\+Word}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00082}{82}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a54fc49953ce72a0cbec230685dd55db3}\label{class_controller_1_1_controller_a54fc49953ce72a0cbec230685dd55db3}} 
+\index{Controller.Controller@{Controller.Controller}!similarWords@{similarWords}}
+\index{similarWords@{similarWords}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{similarWords}{similarWords}}
+{\footnotesize\ttfamily Controller.\+Controller.\+similar\+Words}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00081}{81}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a6e91e1c22bc68f6ce15aa145a8c6be41}\label{class_controller_1_1_controller_a6e91e1c22bc68f6ce15aa145a8c6be41}} 
+\index{Controller.Controller@{Controller.Controller}!tokenizer@{tokenizer}}
+\index{tokenizer@{tokenizer}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{tokenizer}{tokenizer}}
+{\footnotesize\ttfamily Controller.\+Controller.\+tokenizer}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00074}{74}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_a0caef8eaea886ed39a338ccdeccd71c2}\label{class_controller_1_1_controller_a0caef8eaea886ed39a338ccdeccd71c2}} 
+\index{Controller.Controller@{Controller.Controller}!wordNet@{wordNet}}
+\index{wordNet@{wordNet}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{wordNet}{wordNet}}
+{\footnotesize\ttfamily Controller.\+Controller.\+word\+Net}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00072}{72}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+\mbox{\Hypertarget{class_controller_1_1_controller_ad44ef082adb51a06959354946bb85a25}\label{class_controller_1_1_controller_ad44ef082adb51a06959354946bb85a25}} 
+\index{Controller.Controller@{Controller.Controller}!wordSet@{wordSet}}
+\index{wordSet@{wordSet}!Controller.Controller@{Controller.Controller}}
+\doxysubsubsection{\texorpdfstring{wordSet}{wordSet}}
+{\footnotesize\ttfamily Controller.\+Controller.\+word\+Set}
+
+
+
+Definition at line \mbox{\hyperlink{_controller_8py_source_l00084}{84}} of file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/unumuser/\+One\+Drive -\/ Institute of Technology Carlow/\+Software Development 4th year/\+Project/\+Repo/\+Context/\mbox{\hyperlink{_controller_8py}{Controller.\+py}}\end{DoxyCompactItemize}

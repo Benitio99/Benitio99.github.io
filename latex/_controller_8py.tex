@@ -1,0 +1,76 @@
+\hypertarget{_controller_8py}{}\doxysection{C\+:/\+Users/unumuser/\+One\+Drive -\/ Institute of Technology Carlow/\+Software Development 4th year/\+Project/\+Repo/\+Context/\+Controller.py File Reference}
+\label{_controller_8py}\index{C:/Users/unumuser/OneDrive -\/ Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/Controller.py@{C:/Users/unumuser/OneDrive -\/ Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/Controller.py}}
+
+
+Defines the \mbox{\hyperlink{namespace_controller}{Controller}} class.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_controller_1_1_controller}{Controller.\+Controller}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_controller_1_1_controller}{Controller}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_controller}{Controller}}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{namespace_controller}{Controller}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespace_controller_a4a852543a5f6a45daeba4cc0a6e89b92}{Controller.\+DATADIRECTORY}} = \char`\"{}data/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespace_controller_a90acebe83abcb207caabddd5c57ec933}{Controller.\+MODELNAME}} = \char`\"{}distilroberta-\/base\char`\"{}
+\item 
+string \mbox{\hyperlink{namespace_controller_a78fbfe0377be4cc5daaf3537ff9420bd}{Controller.\+MODELLOCATION}} = DATADIRECTORY + MODELNAME + \char`\"{}/\char`\"{} + MODELNAME + \char`\"{}Model\char`\"{}
+\item 
+string \mbox{\hyperlink{namespace_controller_aa9293e0ab92c7316e2f62dd2285a4378}{Controller.\+TOKENIZERLOCATION}} = DATADIRECTORY + MODELNAME + \char`\"{}/\char`\"{} + MODELNAME + \char`\"{}Tokenizer\char`\"{}
+\item 
+string \mbox{\hyperlink{namespace_controller_a3773961c95a7982c623341e865b7da72}{Controller.\+PIPELINETYPE}} = \char`\"{}fill-\/mask\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the \mbox{\hyperlink{namespace_controller}{Controller}} class. 
+
+\hypertarget{_controller_8py_description_Controller}{}\doxysubsection{Description}\label{_controller_8py_description_Controller}
+Defines the main functionality of the spell checker.\hypertarget{_controller_8py_libraries_Controller}{}\doxysubsection{Libraries/\+Modules}\label{_controller_8py_libraries_Controller}
+
+\begin{DoxyItemize}
+\item json library (\href{https://docs.python.org/3/library/json.html}{\texttt{ https\+://docs.\+python.\+org/3/library/json.\+html}})
+\item regex library (\href{https://docs.python.org/3/library/regex.html}{\texttt{ https\+://docs.\+python.\+org/3/library/regex.\+html}})
+\item os library (\href{https://docs.python.org/3/library/os.html}{\texttt{ https\+://docs.\+python.\+org/3/library/os.\+html}})
+\item sys library (\href{https://docs.python.org/3/library/sys.html}{\texttt{ https\+://docs.\+python.\+org/3/library/sys.\+html}})
+\item time library (\href{https://docs.python.org/3/library/time.html}{\texttt{ https\+://docs.\+python.\+org/3/library/time.\+html}})
+\item difflib library (\href{https://docs.python.org/3/library/difflib.html}{\texttt{ https\+://docs.\+python.\+org/3/library/difflib.\+html}})
+\item transformers library (\href{https://huggingface.co/docs/transformers/index}{\texttt{ https\+://huggingface.\+co/docs/transformers/index}})
+\item nltk library (\href{https://www.nltk.org/}{\texttt{ https\+://www.\+nltk.\+org/}})
+\begin{DoxyItemize}
+\item Access to various corpora and functions for natural language processing.
+\end{DoxyItemize}
+\item levenshtein library (\href{https://pypi.org/project/levenshtein/}{\texttt{ https\+://pypi.\+org/project/levenshtein/}})
+\begin{DoxyItemize}
+\item Access to leven function.
+\end{DoxyItemize}
+\item joblib library (\href{https://joblib.readthedocs.io/en/latest/}{\texttt{ https\+://joblib.\+readthedocs.\+io/en/latest/}})
+\begin{DoxyItemize}
+\item Access to model saving and loading functions.
+\end{DoxyItemize}
+\item regex library (\href{https://docs.python.org/3/library/regex.html}{\texttt{ https\+://docs.\+python.\+org/3/library/regex.\+html}})
+\end{DoxyItemize}\hypertarget{_controller_8py_notes_Controller}{}\doxysubsection{Notes}\label{_controller_8py_notes_Controller}
+
+\begin{DoxyItemize}
+\item Comments are Doxygen compatible.
+\end{DoxyItemize}\hypertarget{_controller_8py_todo_Controller}{}\doxysubsection{TODO}\label{_controller_8py_todo_Controller}
+
+\begin{DoxyItemize}
+\item Implement proper recognising of a context error without relying on indicators i.\+e. \char`\"{}\mbox{[}$\,$\mbox{]}\char`\"{}.
+\end{DoxyItemize}\hypertarget{_controller_8py_author_Controller}{}\doxysubsection{Author(s)}\label{_controller_8py_author_Controller}
+
+\begin{DoxyItemize}
+\item Created by Pierce Bennett on 26/09/2021.
+\item Modified by Pierce Bennett on 25/04/2022. 
+\end{DoxyItemize}
+
+Definition in file \mbox{\hyperlink{_controller_8py_source}{Controller.\+py}}.
+

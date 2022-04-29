@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Benitio99/Benitio99.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+This site is used to hsot documentation for the project which you can find <a href = "/html/index.html">here.</a>
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 

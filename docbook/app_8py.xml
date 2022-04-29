@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_app_8py" xml:lang="en-US">
+<title>C:/Users/unumuser/OneDrive - Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/app.py File Reference</title>
+<indexterm><primary>C:/Users/unumuser/OneDrive - Institute of Technology Carlow/Software Development 4th year/Project/Repo/Context/app.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceapp">app</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespaceapp_1a2b8c7dbdf96c543332bfd7861692e44e">app.displayHomepage</link> ()</para>
+
+<para>Serves the initial homepage of the application. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1a6a8aede1b182a37b484e8204a119d007">app.displayResults</link> ()</para>
+
+<para>Requests results from the model and updates the page. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1a2f62c8fee353c7bb1339007a8235ce12">app.shutdown</link> ()</para>
+
+<para>Shutsdown the server. </para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceapp_1affabdd882d8c940cefb64ced31021c66">app.displayDocumentation</link> ()</para>
+
+<para>Serves the Documentation for the program. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceapp_1a675b4ea702c13dc4b8c05f985a25b496">app.app</link> = Flask(__name__)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1ab97b4dc4c1d36802b081c79135c567ca">app.controller</link> = <link linkend="_class_controller_1_1_controller">Controller.Controller</link>()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1a7fa7c11c7474c128736b1d34b15a0d5e">app.host</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceapp_1ae996542be63ac459a38531f7c2dd0a49">app.port</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
